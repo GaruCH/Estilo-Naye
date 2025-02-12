@@ -80,3 +80,78 @@ defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest a
 
 define("RECURSOS_CSS","resource/css");
 define("RECURSOS_IMG","resource/images");
+define("RECURSOS_JS","resource/js");
+
+//ROLES
+define("ROL_SUPERADMIN",  array('nombre' => 'Superadmin',           'clave' => '901'));
+define("ROL_ADMIN",       array('nombre' => 'Admininistrador',      'clave' => '801'));
+define("ROL_TRABAJADOR",   array('nombre' => 'Trabajador',            'clave' => '701'));
+
+define(
+    "ROLES",
+    array(
+        ROL_SUPERADMIN["clave"] => ROL_SUPERADMIN["nombre"],
+        ROL_ADMIN["clave"] =>      ROL_ADMIN["nombre"],
+        ROL_TRABAJADOR["clave"] =>  ROL_TRABAJADOR["nombre"],
+    )
+);
+
+
+//******************************************************************************
+//***************************** PERMISOS DE LOS ROLES **************************
+//******************************************************************************
+
+//TAREAS PROPIAS DEL USUARIO
+define("TAREA_PERFIL", "tarea_perfil");
+define("TAREA_PASSWORD", "tarea_password");
+define("TAREA_ABOUT", "tarea_about");
+define("TAREA_NOTIFICACIONES", "tarea_notificaciones");
+
+//TAREAS PARA EL SUPERADMIN
+define("TAREA_SUPERADMIN_USUARIOS", "tarea_superadmin_usuarios");
+define("TAREA_SUPERADMIN_DASHBOARD", "tarea_superadmin_dashboard");
+
+//TAREAS PARA EL ADMIN
+define("TAREA_ADMIN_DASHBOARD", "tarea_admin_dashboard");
+
+//TAREAS PARA EL PSICOLOGO
+define("TAREA_TRABAJADOR_DASHBOARD", "tarea_trabajador_dashboard");
+
+
+//******************************************************************************
+//***************************** PERMISOS DE LOS ROLES **************************
+//******************************************************************************
+//PERMISOS SUPERADMIN
+define(
+    "PERMISOS_SUPERADMIN",
+    array(
+        TAREA_SUPERADMIN_DASHBOARD,
+        TAREA_SUPERADMIN_USUARIOS,
+        TAREA_PERFIL,
+        TAREA_ABOUT,
+        TAREA_PASSWORD,
+        TAREA_NOTIFICACIONES
+
+    )
+);
+
+define(
+    "PERMISOS_TRABAJADOR",
+    array(
+        TAREA_TRABAJADOR_DASHBOARD,
+        TAREA_PERFIL,
+        TAREA_ABOUT,
+        TAREA_PASSWORD,
+        TAREA_NOTIFICACIONES
+    )
+);
+define(
+    "PERMISOS_ADMIN",
+    array(
+        TAREA_ADMIN_DASHBOARD,
+        TAREA_PERFIL,
+        TAREA_ABOUT,
+        TAREA_PASSWORD,
+        TAREA_NOTIFICACIONES
+    )
+);

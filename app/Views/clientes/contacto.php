@@ -1,10 +1,10 @@
 <?php include 'includes/header.php'; ?>
 
 <main>
-    <section class="mt-16 py-12 font-Outfit">
-
+    <section class="min-h-screen flex justify-center flex-col items-center font-Outfit">
+    
         <div class="flex justify-center">
-            <div class="text-center w-1/2 mb-12 rounded-lg bg-white py-3">
+            <div class="text-center mb-12 rounded-lg bg-white py-3 px-2 mt-2">
                 <h2 class="text-4xl font-bold text-letra">¡Ponte en contacto con nosotros!</h2>
             </div>
         </div>
