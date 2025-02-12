@@ -49,17 +49,17 @@
 
                 <!-- Links del Menú -->
                 <ul class="lg:flex lg:gap-8 font-Outfit font-bold text-xl text-letra space-y-4 lg:space-y-0">
-                    <li><a href="<?= route_to('cliente_inicio') ?>" class="block hover:text-primary">INICIO</a></li>
-                    <li><a href="<?= route_to('cliente_catalogo') ?>" class="block hover:text-primary">CATÁLOGO</a></li>
-                    <li><a href="<?= route_to('cliente_servicios') ?>" class="block hover:text-primary">SERVICIOS</a></li>
-                    <li><a href="<?= route_to('cliente_agenda') ?>" class="block hover:text-primary">AGENDA</a></li>
-                    <li><a href="<?= route_to('cliente_contacto') ?>" class="block hover:text-primary">CONTACTO</a></li>
+                    <li><a href="<?= route_to('cliente_inicio') ?>" class="relative pb-1 after:absolute after:left-1/2 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-letra after:transition-all after:duration-300 hover:after:w-full hover:after:left-0">INICIO</a></li>
+                    <li><a href="<?= route_to('cliente_catalogo') ?>" class="relative pb-1 after:absolute after:left-1/2 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-letra after:transition-all after:duration-300 hover:after:w-full hover:after:left-0">CATÁLOGO</a></li>
+                    <li><a href="<?= route_to('cliente_servicios') ?>" class="relative pb-1 after:absolute after:left-1/2 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-letra after:transition-all after:duration-300 hover:after:w-full hover:after:left-0">SERVICIOS</a></li>
+                    <li><a href="<?= route_to('cliente_agenda') ?>" class="relative pb-1 after:absolute after:left-1/2 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-letra after:transition-all after:duration-300 hover:after:w-full hover:after:left-0">AGENDA</a></li>
+                    <li><a href="<?= route_to('cliente_contacto') ?>" class="relative pb-1 after:absolute after:left-1/2 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-letra after:transition-all after:duration-300 hover:after:w-full hover:after:left-0">CONTACTO</a></li>
                 </ul>
             </div>
 
             <!-- Botón de Sesión -->
             <div class="hidden lg:block">
-                <a href="<?= route_to('usuario_login') ?>" class="font-Outfit text-xl text-letra font-bold hover:text-primary">INICIAR SESIÓN</a>
+                <a href="<?= route_to('usuario_login') ?>" class="font-Outfit text-xl text-letra font-bold relative pb-1 after:absolute after:left-1/2 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-letra after:transition-all after:duration-300 hover:after:w-full hover:after:left-0">INICIAR SESIÓN</a>
             </div>
         </div>
     </nav>
