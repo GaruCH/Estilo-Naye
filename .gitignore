@@ -8,8 +8,6 @@
 .env.local
 
 # Archivos de caché y logs
-writable/*
-!writable/index.html
 
 # Archivos subidos por usuarios
 public/uploads/

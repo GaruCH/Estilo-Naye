@@ -1,0 +1,696 @@
+CRITICAL - 2025-02-10 03:38:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "clientes/inicio.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('clientes/inicio.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/inicio', [], true)
+ 3 APPPATH\Controllers\Clientes\Inicio.php(16): view('clientes/inicio')
+ 4 APPPATH\Controllers\Clientes\Inicio.php(11): App\Controllers\Clientes\Inicio->crear_vista('clientes/inicio')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Inicio->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Inicio))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 03:38:37 --> ErrorException: include(./includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\clientes\index.php on line 1.
+ 1 APPPATH\Views\clientes\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(./includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\index.php', 1)
+ 2 APPPATH\Views\clientes\index.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/index', [], true)
+ 6 APPPATH\Controllers\Clientes\Inicio.php(16): view('clientes/index')
+ 7 APPPATH\Controllers\Clientes\Inicio.php(11): App\Controllers\Clientes\Inicio->crear_vista('clientes/index')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Inicio->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Inicio))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 03:38:49 --> ErrorException: include(./includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\clientes\index.php on line 1.
+ 1 APPPATH\Views\clientes\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(./includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\index.php', 1)
+ 2 APPPATH\Views\clientes\index.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/index', [], true)
+ 6 APPPATH\Controllers\Clientes\Inicio.php(16): view('clientes/index')
+ 7 APPPATH\Controllers\Clientes\Inicio.php(11): App\Controllers\Clientes\Inicio->crear_vista('clientes/index')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Inicio->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Inicio))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 03:40:28 --> ErrorException: include(./includes/footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\clientes\index.php on line 83.
+ 1 APPPATH\Views\clientes\index.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(./includes/footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\index.php', 83)
+ 2 APPPATH\Views\clientes\index.php(83): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/index', [], true)
+ 6 APPPATH\Controllers\Clientes\Inicio.php(16): view('clientes/index')
+ 7 APPPATH\Controllers\Clientes\Inicio.php(11): App\Controllers\Clientes\Inicio->crear_vista('clientes/index')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Inicio->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Inicio))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:44:22 --> ErrorException: include(includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:44:53 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:48:29 --> ErrorException: include(.:/includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(.:/includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:48:58 --> ErrorException: include(includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:52:41 --> ErrorException: include(header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:54:56 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:56:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages/catalogo.php"
+[Method: GET, Route: catalogo]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/catalogo.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/catalogo.php', [], true)
+ 3 APPPATH\Controllers\Clientes\Catalogo.php(16): view('pages/catalogo.php')
+ 4 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('pages/catalogo.php')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:56:27 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:57:26 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:57:42 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:58:35 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 04:59:02 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:00:01 --> ErrorException: include(.../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(.../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:06:27 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:07:19 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:09:18 --> ErrorException: include(../../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:09:29 --> ErrorException: include(header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:09:38 --> ErrorException: include(../includes/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: catalogo]
+in APPPATH\Views\clientes\pages\catalogo.php on line 1.
+ 1 APPPATH\Views\clientes\pages\catalogo.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../includes/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php', 1)
+ 2 APPPATH\Views\clientes\pages\catalogo.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\pages\\catalogo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/pages/catalogo.php', [], true)
+ 6 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/pages/catalogo.php')
+ 7 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/pages/catalogo.php')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:10:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "clientes/catalogo.php"
+[Method: GET, Route: catalogo]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('clientes/catalogo.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/catalogo.php', [], true)
+ 3 APPPATH\Controllers\Clientes\Catalogo.php(16): view('clientes/catalogo.php')
+ 4 APPPATH\Controllers\Clientes\Catalogo.php(11): App\Controllers\Clientes\Catalogo->crear_vista('clientes/catalogo.php')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Catalogo->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Catalogo))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:36 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-9.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-9.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-9.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-9.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:36 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-7.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-7.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-7.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-7.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-8.png"
+[Method: GET, Route: resource/images/dise%C3%B1o-8.png]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-8.png')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-8.png')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-3.png"
+[Method: GET, Route: resource/images/dise%C3%B1o-3.png]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-3.png')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-3.png')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-4.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-4.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-4.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-4.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-5.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-5.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-5.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-5.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-6.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-6.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-6.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-6.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:38 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-10.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-10.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-10.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-10.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:38 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-11.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-11.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-11.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-11.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:39:38 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-12.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-12.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-12.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-12.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:00 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-12.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-12.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-12.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-12.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:00 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-9.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-9.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-9.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-9.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:00 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-4.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-4.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-4.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-4.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-5.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-5.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-5.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-5.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-6.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-6.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-6.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-6.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-10.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-10.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-10.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-10.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-11.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-11.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-11.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-11.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:02 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-7.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-7.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-7.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-7.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:40:02 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-8.png"
+[Method: GET, Route: resource/images/dise%C3%B1o-8.png]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-8.png')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-8.png')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:41:18 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-7.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-7.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-7.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-7.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:41:18 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-8.png"
+[Method: GET, Route: resource/images/dise%C3%B1o-8.png]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-8.png')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-8.png')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:41:18 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-10.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-10.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-10.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-10.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:41:18 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-9.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-9.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-9.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-9.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:41:19 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-11.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-11.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-11.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-11.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:41:19 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-12.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-12.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-12.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-12.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:43:57 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-11.jpg"
+[Method: GET, Route: resource/images/dise%C3%B1o-11.jpg]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-11.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-11.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:43:58 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "diseño-8.png"
+[Method: GET, Route: resource/images/dise%C3%B1o-8.png]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('resource/images/diseño-8.png')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('resource/images/diseño-8.png')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-02-10 05:59:56 --> ErrorException: include(includes/includes.php): Failed to open stream: No such file or directory
+[Method: GET, Route: servicios]
+in APPPATH\Views\clientes\servicios.php on line 1.
+ 1 APPPATH\Views\clientes\servicios.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(includes/includes.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\servicios.php', 1)
+ 2 APPPATH\Views\clientes\servicios.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\clientes\\servicios.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('clientes/servicios', [], true)
+ 6 APPPATH\Controllers\Clientes\Servicios.php(17): view('clientes/servicios', [...])
+ 7 APPPATH\Controllers\Clientes\Servicios.php(11): App\Controllers\Clientes\Servicios->crear_vista('clientes/servicios')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Clientes\Servicios->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes\Servicios))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
