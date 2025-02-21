@@ -19,7 +19,7 @@
             </div>
 
             <!-- Tarjeta de contacto con banner -->
-            <div class="w-full md:w-[500px] bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-full md:w-[500px] bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidde">
                 <!-- Banner -->
                 <div class="h-40 w-full bg-cover bg-center" style="background-image: url('<?= base_url(RECURSOS_IMG . '/contacto-1.jpg') ?>');"></div>
 

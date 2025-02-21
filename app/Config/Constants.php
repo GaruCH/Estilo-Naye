@@ -78,9 +78,67 @@ defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8);       // database 
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9);      // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest automatically-assigned error code
 
-define("RECURSOS_CSS","resource/css");
-define("RECURSOS_IMG","resource/images");
-define("RECURSOS_JS","resource/js");
+
+//************************************************************************
+//********************* CONSTANTES SISTEMA *******************************
+//************************************************************************
+//=================================SISTEMA======================================
+define("ACRONIMO_SISTEMA", 'ENE');
+define("NOMBRE_SISTEMA", 'Estilo Naye Studio');
+define("BACKGROUND_SISTEMA", '');
+define("FAV_ICON_SISTEMA", 'sin-fondo.png');
+define("LOGO_SISTEMA", 'logo_naye.svg');
+define("BACKGROUND_SISTEMA_LOGIN", '');
+
+
+define('SMTP_PROTOCOL', 'smtp');
+define('SMTP_HOST', 'smtp.ionos.mx');
+define('SMTP_USER', 'developer_team@tiamlab.com');
+define('SMTP_PASSWORD', 'So&lo.Ti-454M7a8.lbi40');
+define('SMTP_PORT', 587);
+define('SMTP_CRYPTO', 'tls');
+define('SMTP_MAIL_TYPE', 'html');
+
+define('CORREO_EMISOR_SISTEMA', 'developer_team@tiamlab.com');
+define('COLOR_SISTEMA_INFO', '#009efb');
+define('COLOR_SISTEMA_PRIMARY', '#7460ee');
+define('COLOR_SISTEMA_SECONDARY', '#868e96');
+define('COLOR_SISTEMA_SUCCESS', '#39c449');
+define('COLOR_SISTEMA_WARNING', '#ffbc34');
+define('COLOR_SISTEMA_DANGER', '#f62d51');
+
+//ALERTAS
+define("SUCCESS_ALERT", 1); //In JS The same
+define("DANGER_ALERT", 2);  //In JS The same
+define("INFO_ALERT", 3);    //In JS The same
+define("WARNING_ALERT", 4); //In JS The same
+
+//RUTAS BASE PANEL
+define("RECURSOS_PANEL_CSS", "recursos_panel_monster/css");         //In JS = R_P_C
+define("RECURSOS_PANEL_JS", "recursos_panel_monster/js");           //In JS = R_P_J
+define("RECURSOS_PANEL_IMAGENES", "recursos_panel_monster/images"); //In JS = R_P_I
+define("RECURSOS_PANEL_PLUGINS", "recursos_panel_monster/plugins"); //In JS = R_P_P
+
+//=================================ESTATUS======================================
+//Habilitado/Deshabilitado
+define("ESTATUS_HABILITADO", 2);     //In JS = E_H
+define("ESTATUS_DESHABILITADO", -1); //In JS = E_D
+
+//DIRECTORIOS
+define("IMG_DIR_USUARIOS", "recursos_panel_monster/images/profile-images"); //In JS = I_D_O
+define("IMG_DIR_SISTEMA", "images/sistema"); //In JS = I_D_S
+define("IMG_DIR_ICONOS", "images/iconos"); //In JS = I_D_I
+
+define("_DIR_", ""); //In JS = 
+
+//SEXOS
+define("SEXO_FEMENINO", 1); //In JS = S_F
+define("SEXO_MASCULINO", 2); //In JS = S_M
+
+
+define("RECURSOS_CSS", "resource/css");
+define("RECURSOS_IMG", "resource/images");
+define("RECURSOS_JS", "resource/js");
 
 //ROLES
 define("ROL_SUPERADMIN",  array('nombre' => 'Superadmin',           'clave' => '901'));
@@ -91,32 +149,34 @@ define(
     "ROLES",
     array(
         ROL_SUPERADMIN["clave"] => ROL_SUPERADMIN["nombre"],
-        ROL_ADMIN["clave"] =>      ROL_ADMIN["nombre"],
-        ROL_TRABAJADOR["clave"] =>  ROL_TRABAJADOR["nombre"],
+        ROL_ADMIN["clave"] => ROL_ADMIN["nombre"],
+        ROL_TRABAJADOR["clave"] => ROL_TRABAJADOR["nombre"]
     )
 );
-
 
 //******************************************************************************
 //***************************** PERMISOS DE LOS ROLES **************************
 //******************************************************************************
+// TAREA DASHBOARD
+define("TAREA_SUPERADMIN_DASHBOARD", "tarea_superadmin_dashboard");
 
 //TAREAS PROPIAS DEL USUARIO
 define("TAREA_PERFIL", "tarea_perfil");
 define("TAREA_PASSWORD", "tarea_password");
-define("TAREA_ABOUT", "tarea_about");
-define("TAREA_NOTIFICACIONES", "tarea_notificaciones");
 
-//TAREAS PARA EL SUPERADMIN
-define("TAREA_SUPERADMIN_USUARIOS", "tarea_superadmin_usuarios");
-define("TAREA_SUPERADMIN_DASHBOARD", "tarea_superadmin_dashboard");
+//TAREAS DE USUARIOS
+define("TAREA_USUARIOS", "tarea_usuarios");
+define("TAREA_USUARIO_NUEVO", "tarea_usuario_nuevo");
+define("TAREA_USUARIO_DETALLES", "tarea_usuario_detalles");
+define("TAREA_EJEMPLO", "tarea_ejemplo");
 
-//TAREAS PARA EL ADMIN
+
+// TAREA DASHBOARD
 define("TAREA_ADMIN_DASHBOARD", "tarea_admin_dashboard");
 
-//TAREAS PARA EL PSICOLOGO
-define("TAREA_TRABAJADOR_DASHBOARD", "tarea_trabajador_dashboard");
 
+// TAREA DASHBOARD
+define("TAREA_TRABAJADOR_DASHBOARD", "tarea_trabajador_dashboard");
 
 //******************************************************************************
 //***************************** PERMISOS DE LOS ROLES **************************
@@ -126,32 +186,33 @@ define(
     "PERMISOS_SUPERADMIN",
     array(
         TAREA_SUPERADMIN_DASHBOARD,
-        TAREA_SUPERADMIN_USUARIOS,
         TAREA_PERFIL,
-        TAREA_ABOUT,
         TAREA_PASSWORD,
-        TAREA_NOTIFICACIONES
+        TAREA_USUARIOS,
+        TAREA_USUARIO_NUEVO,
+        TAREA_USUARIO_DETALLES,
+        TAREA_EJEMPLO
+
+    )
+);
+
+//PERMISOS SUPERADMIN
+define(
+    "PERMISOS_ADMIN",
+    array(
+        TAREA_ADMIN_DASHBOARD,
+        TAREA_PERFIL,
+        TAREA_PASSWORD,
+        TAREA_USUARIOS,
+        TAREA_USUARIO_NUEVO,
+        TAREA_USUARIO_DETALLES,
+        TAREA_EJEMPLO
 
     )
 );
 
 define(
     "PERMISOS_TRABAJADOR",
-    array(
-        TAREA_TRABAJADOR_DASHBOARD,
-        TAREA_PERFIL,
-        TAREA_ABOUT,
-        TAREA_PASSWORD,
-        TAREA_NOTIFICACIONES
-    )
-);
-define(
-    "PERMISOS_ADMIN",
-    array(
-        TAREA_ADMIN_DASHBOARD,
-        TAREA_PERFIL,
-        TAREA_ABOUT,
-        TAREA_PASSWORD,
-        TAREA_NOTIFICACIONES
+    array(TAREA_TRABAJADOR_DASHBOARD,
     )
 );

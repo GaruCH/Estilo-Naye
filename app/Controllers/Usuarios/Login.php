@@ -6,9 +6,9 @@ use App\Controllers\BaseController;
 
 class Login extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        /*
+
         $session = session();
 
         if ($session->has('rol_actual')) {
@@ -18,21 +18,21 @@ class Login extends BaseController
             switch ($rol_actual) {
                 case ROL_SUPERADMIN['clave']:
                     $session->set("tarea_actual", TAREA_SUPERADMIN_DASHBOARD);
-                    return redirect()->to(route_to('dashboard_superadmin'));
+                    return redirect()->to( route_to('dashboard_superadmin'));
                 case ROL_ADMIN['clave']:
                     $session->set("tarea_actual", TAREA_ADMIN_DASHBOARD);
                     return redirect()->to(route_to('dashboard_admin'));
                 case ROL_TRABAJADOR['clave']:
                     $session->set("tarea_actual", TAREA_TRABAJADOR_DASHBOARD);
-                    return redirect()->to(route_to('dashboard_psicologo'));
+                    return redirect()->to(route_to('dashboard_trabajador'));
                 default:
+                    return redirect()->to(route_to('usuario_login'))->with('error', 'Acceso no autorizado');
             }
         } else {
             // Si no hay rol definido, mostrar la vista de login
             return $this->crear_vista("usuarios/login");
         }
-            */
-            return $this->crear_vista("usuarios/login");
+
     }
 
     private function crear_vista($nombre_vista)
@@ -42,7 +42,7 @@ class Login extends BaseController
         return view($nombre_vista, $datos);
     }
 
-        /*
+
     public function comprobar()
     {
         $email = $this->request->getPost("email");
@@ -80,30 +80,25 @@ class Login extends BaseController
                     $session->set("tarea_actual", TAREA_ADMIN_DASHBOARD);
                     log_message('info', 'Redirigiendo a dashboard para el rol ADMIN');
                     return redirect()->to(route_to('dashboard_admin'));
-                case ROL_PSICOLOGO['clave']:
-                    $session->set("tarea_actual", TAREA_PSICOLOGO_DASHBOARD);
+                case ROL_TRABAJADOR['clave']:
+                    $session->set("tarea_actual", TAREA_TRABAJADOR_DASHBOARD);
                     log_message('info', 'Redirigiendo a dashboard_psicologo para el rol PSICOLOGO');
-                    return redirect()->to(route_to('dashboard_psicologo'));
-                case ROL_PACIENTE['clave']:
-                    $session->set("tarea_actual", TAREA_PACIENTE_DASHBOARD);
-                    log_message('info', 'Redirigiendo a dashboard_paciente para el rol PACIENTE');
-                    return redirect()->to(route_to('dashboard_paciente'));
+                    return redirect()->to(route_to('dashboard_trabajador'));
                 default:
                     log_message('info', 'Redirigiendo al login');
-                    return redirect()->to(route_to('login'));
+                    return redirect()->to(route_to('usuario_login'));
             }
 
             if ($usuario->sexo_usuario == SEXO_MASCULINO)
-                mensaje("Bienvenido a la " . NOMBRE_SISTEMA, INFO_ALERT, "¡Hola " . $session->nombre_usuario . '!', 3500);
+                mensaje('Bienvenido a la ' . NOMBRE_SISTEMA, INFO_ALERT, '¡Hola ' . $session->nombre_usuario . '!', 3500);
             else
-                mensaje("Bienvenida a la " . NOMBRE_SISTEMA, INFO_ALERT, "¡Hola " . $session->nombre_usuario . '!', 3500);
+                mensaje('Bienvenida a la ' . NOMBRE_SISTEMA, INFO_ALERT, '¡Hola ' . $session->nombre_usuario . '!', 3500);
 
             log_message('info', 'Redirigiendo según el rol del usuario: ' . $usuario->clave_rol);
         } else {
-            mensaje('Tu correo y/o contraseña son incorrectos. Intenta nuevamente, por favor.', DANGER_ALERT, '¡Credenciales incorrectas!', 3000);
+            mensaje('Tu correo y/o contraseña son incorrectos. Intenta nuevamente, por favor.', DANGER_ALERT, '¡Credenciales incorrectas!', 3500);
             log_message('info', 'Credenciales incorrectas para el email: ' . $email);
-            return redirect()->to(route_to('login'));
+            return redirect()->to(route_to('usuario_login'));
         }
     }
-        */
 }
