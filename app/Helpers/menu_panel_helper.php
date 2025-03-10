@@ -142,23 +142,72 @@ function configurar_menu_lateral_panel($rol_actual = NULL)
         $menu_item = array();
         $menu_item['is_active'] = false;
         $menu_item['href'] = route_to('administracion_usuarios');
-        $menu_item['icon'] = 'fas fa-user';
+        $menu_item['icon'] = 'fas fa-users';
         $menu_item['text'] = ' Usuarios';
         $menu_item['submenu'] = array();
         $menu['usuarios'] = $menu_item;
 
+        //Sección Servicios
+        $menu_item = array();
+        $menu_item['is_active'] = false;
+        $menu_item['href'] = route_to('administracion_servicios');
+        $menu_item['icon'] = 'fa fa-book';
+        $menu_item['text'] = ' Servicios';
+        $menu_item['submenu'] = array();
+        $menu['servicios'] = $menu_item;
 
-         //Sección Usuarios
-         $menu_item = array();
-         $menu_item['is_active'] = false;
-         $menu_item['href'] = route_to('ejemplo');
-         $menu_item['icon'] = 'fas fa-user';
-         $menu_item['text'] = ' Ejemplo';
-         $menu_item['submenu'] = array();
-         $menu['ejemplo'] = $menu_item;
-        
+        //Sección Categorías
+        $menu_item = array();
+        $menu_item['is_active'] = false;
+        $menu_item['href'] = route_to('administracion_categorias');
+        $menu_item['icon'] = 'fa fa-tags';
+        $menu_item['text'] = ' Categorías';
+        $menu_item['submenu'] = array();
+        $menu['categorias'] = $menu_item;
 
-    }//end ROL_SUPERADMIN ROL_ADMIN
+        // Sección Productos
+        $menu_item = array();
+        $menu_item['is_active'] = FALSE;
+        $menu_item['href'] = '#';
+        $menu_item['icon'] = 'fa fa-cubes';
+        $menu_item['text'] = 'Productos';
+        $menu_item['submenu'] = array(); 
+
+        // Submenú - Administración de Productos
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('administracion_productos');
+        $sub_menu_item['icon'] = 'fa fa-cogs';
+        $sub_menu_item['text'] = 'Administración';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        // Submenú - Historial de Productos
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('historial_productos');
+        $sub_menu_item['icon'] = 'fa fa-search-minus';
+        $sub_menu_item['text'] = 'Historial Productos';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('asignacion_categorias');
+        $sub_menu_item['icon'] = 'fa fa-search-minus';
+        $sub_menu_item['text'] = 'Asignación categorías';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        $menu['productos'] = $menu_item; // Guardar en el menú principal
+
+
+        //Sección Citas
+        $menu_item = array();
+        $menu_item['is_active'] = false;
+        $menu_item['href'] = route_to('administracion_citas');
+        $menu_item['icon'] = 'fa fa-address-book';
+        $menu_item['text'] = ' Citas';
+        $menu_item['submenu'] = array();
+        $menu['citas'] = $menu_item;
+    } //end ROL_SUPERADMIN ROL_ADMIN
 
 
     /*menu con submenu de ejemplo*/
@@ -229,14 +278,13 @@ function activar_menu_item_panel($menu = NULL, $tarea_actual = NULL)
             case TAREA_USUARIO_DETALLES:
                 $menu['usuarios']['is_active'] = TRUE;
                 break;
-                case TAREA_EJEMPLO:
-                    $menu['ejemplo']['is_active'] = TRUE;
-                    break;
+            case TAREA_EJEMPLO:
+                $menu['ejemplo']['is_active'] = TRUE;
+                break;
             default:
                 break;
-
-        }//end switch tarea actual
-    }//end if ROL_OFICIAL
+        } //end switch tarea actual
+    } //end if ROL_OFICIAL
 
 
     /*

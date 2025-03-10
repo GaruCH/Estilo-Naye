@@ -1,12 +1,15 @@
-<?php namespace App\Models;
+<?php
+
+namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Tabla_roles extends Model{
+class Tabla_roles extends Model
+{
     protected $table      = 'roles';
     protected $primaryKey = 'id_rol';
     protected $returnType = 'object';
-    protected $allowedFields = ['estatus_rol', 'id_rol', 'rol'];
+    protected $allowedFields = ['estatus_rol', 'id_rol', 'nombre_rol'];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
 
@@ -14,26 +17,27 @@ class Tabla_roles extends Model{
     protected $updatedField  = 'actualizacion';
     protected $deletedField  = 'eliminacion';
 
-    public function obtener_roles($rol_actual = 0){
-        if($rol_actual == ROL_SUPERADMIN['clave']){
+    public function obtener_roles($rol_actual = 0)
+    {
+        if ($rol_actual == ROL_SUPERADMIN['clave']) {
             $resultado = $this
-                        ->select('id_rol AS clave, rol AS nombre')
-                        ->orderBy('rol', 'ASC')
-                        ->findAll();
-        }//end if el rol actual es el superadmin
-        else{
+                ->select('id_rol AS clave, nombre_rol AS nombre')
+                ->orderBy('nombre_rol', 'ASC')
+                ->findAll();
+        } //end if el rol actual es el superadmin
+        else {
             $resultado = $this
-                        ->select('id_rol AS clave, rol AS nombre')
-                        ->where('id_rol != ', ROL_ADMIN['clave'])
-                        ->where('id_rol != ', ROL_SUPERADMIN['clave'])
-                        ->orderBy('rol', 'ASC')
-                        ->findAll();
-        }//end else el rol actual es el superadmin
+                ->select('id_rol AS clave, nombre_rol AS nombre')
+                ->where('id_rol != ', ROL_ADMIN['clave'])
+                ->where('id_rol != ', ROL_SUPERADMIN['clave'])
+                ->orderBy('nombre_rol', 'ASC')
+                ->findAll();
+        } //end else el rol actual es el superadmin
         $roles = array();
-        foreach($resultado as $res){
+        foreach ($resultado as $res) {
             $roles[$res->clave] = $res->nombre;
-        }//end foreach resultado
+        } //end foreach resultado
         return $roles;
-    }//end obtener_roles
+    } //end obtener_roles
 
 }//End Model roles

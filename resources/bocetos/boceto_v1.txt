@@ -1,0 +1,125 @@
+CREATE TABLE tipo_persona (
+    creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    actualizacion TIMESTAMP NULL DEFAULT NULL,
+    eliminacion DATETIME DEFAULT NULL,
+    id_tipo_persona INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre_tipo VARCHAR(50) NOT NULL UNIQUE COMMENT 'Ejemplo: Cliente, Proveedor, Empleado'
+) ENGINE=InnoDB;
+
+CREATE TABLE personas (
+    id_persona INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_tipo_persona INT(11) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    ap_paterno VARCHAR(50) NOT NULL,
+    ap_materno VARCHAR(50) NULL DEFAULT NULL,
+    telefono VARCHAR(15) NULL DEFAULT NULL,
+    correo VARCHAR(100) NOT NULL UNIQUE,
+    creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    actualizacion TIMESTAMP NULL DEFAULT NULL,
+    eliminacion DATETIME DEFAULT NULL,
+    FOREIGN KEY (id_tipo_persona) REFERENCES tipo_persona(id_tipo_persona) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE roles (
+    creacion_rol TIMESTAMP NULL DEFAULT NULL,
+    actualizacion_rol TIMESTAMP NULL DEFAULT NULL,
+    eliminacion_rol DATETIME DEFAULT NULL
+    id_rol INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre_rol VARCHAR(50) NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE usuarios (
+    id_usuario INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_persona INT(11) NOT NULL UNIQUE,
+    id_rol INT(11) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    estatus TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1 -> Activo, 0 -> Inactivo',
+    FOREIGN KEY (id_persona) REFERENCES personas(id_persona) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_rol) REFERENCES roles(id_rol) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE proveedores (
+    id_proveedor INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_persona INT(11) NOT NULL UNIQUE,
+    nombre_empresa VARCHAR(100) NOT NULL,
+    responsable VARCHAR(100) NOT NULL,
+    calle VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    colonia VARCHAR(100) NOT NULL,
+    codigo_postal VARCHAR(10) NOT NULL,
+    FOREIGN KEY (id_persona) REFERENCES personas(id_persona) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE servicios (
+    creacion_servicio TIMESTAMP NULL DEFAULT NULL,
+    actualizacion_servicio TIMESTAMP NULL DEFAULT NULL,
+    eliminacion_servicio DATETIME DEFAULT NULL
+    id_servicio INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre_servicio VARCHAR(100) NOT NULL,
+    descripcion_servicio TEXT NULL DEFAULT NULL,
+    duracion_min_servicio INT(3) NOT NULL,
+    precio_servicio DECIMAL(10,2) NOT NULL,
+    estatus_servicio TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1 -> Activo, 0 -> Inactivo'
+) ENGINE=InnoDB;
+
+
+CREATE TABLE citas (
+    creacion_cita TIMESTAMP NULL DEFAULT NULL,
+    actualizacion_cita TIMESTAMP NULL DEFAULT NULL,
+    eliminacion_cita DATETIME DEFAULT NULL,
+    id_cita INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_servicio INT(11) NOT NULL,
+    id_usuario INT(11) NOT NULL,
+    fecha_cita DATE NOT NULL,
+    hora_cita TIME NOT NULL,
+    estado_cita VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_servicio) REFERENCES servicios(id_servicios) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE categorias (
+    creacion_categoria TIMESTAMP NULL DEFAULT NULL,
+    actualizacion_categoria TIMESTAMP NULL DEFAULT NULL,
+    eliminacion_categoria DATETIME DEFAULT NULL
+    id_categoria INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre_categoria VARCHAR(50) NOT NULL,
+    descripcion_categoria TEXT NULL DEFAULT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE productos (
+    creacion_producto TIMESTAMP NULL DEFAULT NULL,
+    actualizacion_producto TIMESTAMP NULL DEFAULT NULL,
+    eliminacion_producto DATETIME DEFAULT NULL,
+    id_producto INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_categoria INT(11) NOT NULL,
+    nombre_producto VARCHAR(100) NOT NULL,
+    descripcion_producto TEXT NULL DEFAULT NULL,
+    cantidad_producto INT(3) NOT NULL,
+    stock_minimo_producto INT(3) NOT NULL DEFAULT 0,
+    FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE citas_productos (
+    creacion_producto TIMESTAMP NULL DEFAULT NULL,
+    actualizacion_producto TIMESTAMP NULL DEFAULT NULL,
+    eliminacion_producto DATETIME DEFAULT NULL,
+    id_citas_productos INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_cita INT(11) NOT NULL,
+    id_producto INT(11) NOT NULL,
+    unidad INT(3) NOT NULL,
+    FOREIGN KEY (id_cita) REFERENCES citas(id_cita) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_producto) REFERENCES productos(id_producto) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE productos_proveedores (
+    creacion_producto TIMESTAMP NULL DEFAULT NULL,
+    actualizacion_producto TIMESTAMP NULL DEFAULT NULL,
+    eliminacion_producto DATETIME DEFAULT NULL,
+    id_productos_proveedores INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_proveedor INT(11) NOT NULL,
+    id_producto INT(11) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    cantidad_compra INT(3) NOT NULL,
+    FOREIGN KEY (id_producto) REFERENCES productos(id_producto) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;

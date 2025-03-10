@@ -15,8 +15,8 @@
                 <h4 class="card-title">Editar usuario</h4>
                 <h5 class="card-subtitle mb-3 pb-3 border-bottom">Todos los campos marcados con (<font color="red">*</font>) son obligatorios</h5>
                 <center>
-                    <img src="<?= base_url(IMG_DIR_USUARIOS.'/'.($usuario->imagen_usuario == NULL ? ($usuario->sexo_usuario == SEXO_MASCULINO ? 'no-image-m.png' : 'no-image-f.png') : $usuario->imagen_usuario));?>"
-                         alt="imagen_usuario" class="avatar-img rounded-circle" width="150px" id="img" style="margin-bottom: 15px;" data-image="<?= ($usuario->imagen_usuario == NULL ? 'false' : 'true') ?>">
+                    <img src="<?= base_url(IMG_DIR_USUARIOS.'/'.($usuario->imagen == NULL ? ($usuario->sexo == SEXO_MASCULINO ? 'no-image-m.png' : 'no-image-f.png') : $usuario->imagen));?>"
+                         alt="imagen_usuario" class="avatar-img rounded-circle" width="150px" id="img" style="margin-bottom: 15px;" data-image="<?= ($usuario->imagen == NULL ? 'false' : 'true') ?>">
                 </center>
                 <?php
                     $parametros = array('id' => 'formulario-usuario-editar');
@@ -31,7 +31,7 @@
                                                         'id' => 'nombre',
                                                         'name' => 'nombre',
                                                         'placeholder' => 'Nombre(s)',
-                                                        'value' => $usuario->nombre_usuario
+                                                        'value' => $usuario->nombre
                                                         );
                                     echo form_input($parametros);
                                 ?>
@@ -48,7 +48,7 @@
                                                         'id' => 'ap_paterno',
                                                         'name' => 'ap_paterno',
                                                         'placeholder' => 'Apellido Paterno',
-                                                        'value' => $usuario->ap_paterno_usuario
+                                                        'value' => $usuario->ap_paterno
                                                         );
                                     echo form_input($parametros);
                                 ?>
@@ -73,7 +73,7 @@
                                                         'id' => 'ap_materno',
                                                         'name' => 'ap_materno',
                                                         'placeholder' => 'Apellido Materno',
-                                                        'value' => $usuario->ap_materno_usuario
+                                                        'value' => $usuario->ap_materno
                                                         );
                                     echo form_input($parametros);
                                 ?>
@@ -106,7 +106,7 @@
                                                         'name' => 'sexo',
                                                         'class' => 'form-check-input radio-item'
                                                         );
-                                    echo form_radio($parametros, SEXO_MASCULINO, ($usuario->sexo_usuario == SEXO_MASCULINO ? TRUE : FALSE));
+                                    echo form_radio($parametros, SEXO_MASCULINO, ($usuario->sexo == SEXO_MASCULINO ? TRUE : FALSE));
                                 ?>
                                 <label class="form-check-label" for="masculino"><i class="fas fa-mars text-dark fill-white me-2"></i>Masculino</label>
                             </div>
@@ -116,7 +116,7 @@
                                                         'name' => 'sexo',
                                                         'class' => 'form-check-input radio-item'
                                                         );
-                                    echo form_radio($parametros, SEXO_FEMENINO, ($usuario->sexo_usuario == SEXO_FEMENINO ? TRUE : FALSE));
+                                    echo form_radio($parametros, SEXO_FEMENINO, ($usuario->sexo == SEXO_FEMENINO ? TRUE : FALSE));
                                 ?>
                                 <label class="form-check-label" for="femenino"><i class="fas fa-venus text-dark fill-white me-2"></i>Femenino</label>
                             </div>
@@ -131,7 +131,7 @@
                                                         'id' => 'email',
                                                         'name' => 'email',
                                                         'placeholder' => 'ejemplo@dominio.com',
-                                                        'value' => $usuario->email_usuario
+                                                        'value' => $usuario->correo
                                                         );
                                     echo form_input($parametros);
                                 ?>
@@ -186,7 +186,7 @@
                                                         'class' => 'form-control',
                                                         'name' => 'imagen_perfil',
                                                         'id' => 'imagen_perfil',
-                                                        'onchange' => "validate_image(this, 'img', 'btn-guardar', '../recursos_panel_monster/images/profile-images/".($usuario->imagen_usuario == NULL ? ($usuario->sexo_usuario == SEXO_MASCULINO ? 'no-image-m.png' : 'no-image-f.png') : $usuario->imagen_usuario)."', 512, 512);",
+                                                        'onchange' => "validate_image(this, 'img', 'btn-guardar', '../recursos_panel_monster/images/profile-images/".($usuario->imagen == NULL ? ($usuario->sexo == SEXO_MASCULINO ? 'no-image-m.png' : 'no-image-f.png') : $usuario->imagen)."', 512, 512);",
                                                         'accept' => '.png, .jpeg, .jpg'
                                                        );
                                     echo form_input($parametros);
@@ -225,7 +225,7 @@
 
     <!-- JS específico -->
     <script>
-        let urlImg = "../../recursos_panel_monster/images/profile-images/<?= ($usuario->imagen_usuario == NULL ? ($usuario->sexo_usuario == SEXO_MASCULINO ? 'no-image-m.png' : 'no-image-f.png') : $usuario->imagen_usuario) ?>";
+        let urlImg = "../../recursos_panel_monster/images/profile-images/<?= ($usuario->imagen == NULL ? ($usuario->sexo == SEXO_MASCULINO ? 'no-image-m.png' : 'no-image-f.png') : $usuario->imagen) ?>";
     </script>
     <script src="<?php echo base_url(RECURSOS_PANEL_JS."/specifics/usuario_detalles.js") ?>"></script>
 <?= $this->endSection(); ?>

@@ -43,17 +43,17 @@
                                             ++$num.
                                          '</td>';
                                     echo '<td class="special-cell text-center">'.
-                                            $usuario->nombre_usuario.' '.$usuario->ap_paterno_usuario.' '.$usuario->ap_materno_usuario.
+                                            $usuario->nombre.' '.$usuario->ap_paterno.' '.$usuario->ap_materno.
                                           '</td>';
                                     echo '<td class="special-cell text-center">'.
-                                            $usuario->email_usuario.
+                                            $usuario->correo.
                                          '</td>';
                                     echo '<td class="special-cell text-center">'.
-                                            $usuario->rol.
+                                            $usuario->nombre_rol.
                                          '</td>';
                                     echo '<td class="special-cell text-center" nowrap="nowrap">';
                                     if(isset($usuario->eliminacion)){
-                    					echo '<button type="button" class="btn btn-light-danger text-danger recover-user btn-circle" id="recover-user_'.$usuario->id_usuario.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuperar el usuario">
+                    					echo '<button type="button" class="btn btn-light-danger text-danger recover-user btn-circle" id="recover-user_'.$usuario->id_persona.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuperar el usuario">
                     							<i data-feather="rotate-ccw" class="feather fill-white"></i>
                     						  </button>';
                     				}//end if el usuario ha sido eliminado
@@ -75,7 +75,7 @@
                                                     <i data-feather="unlock" class="feather feather-sm fill-white"></i><i data-feather="rotate-ccw" class="feather feather-sm fill-white" style="width: 12px; height: 12px;"></i>
                                               </button>';
                                         echo '&nbsp;&nbsp;&nbsp;';
-                                        echo '<button type="button" class="btn btn-danger eliminar btn-circle" id="'.$usuario->id_usuario.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar al usuario">
+                                        echo '<button type="button" class="btn btn-danger eliminar btn-circle" id="'.$usuario->id_persona.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar al usuario">
                                                     <i data-feather="trash-2" class="feather fill-white"></i>
                                               </button>';
                                     }//end else el usuario ha sido eliminado

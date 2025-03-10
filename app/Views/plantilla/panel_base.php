@@ -202,9 +202,11 @@
 	                                <a class="dropdown-item" href="<?= route_to('mi_perfil') ?>">
 										<i data-feather="user" class="feather-sm text-info me-1 ms-1"></i> Mi perfil
 									</a>
+									<!--- 
 									<a class="dropdown-item" href="<?= route_to('cambiar_password') ?>">
 										<i data-feather="lock" class="feather-sm text-info me-1 ms-1"></i> Cambiar contraseña
 									</a>
+									--->
 	                                <div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="<?= route_to('logout') ?>">
 										<i data-feather="log-out" class="feather-sm text-danger me-1 ms-1"></i> Cerrar sesión
@@ -239,15 +241,7 @@
 	            <!-- End Sidebar scroll-->
 	            <!-- Bottom points-->
 	            <div class="sidebar-footer">
-	                <a href="<?= route_to('mi_perfil') ?>" class="link" data-bs-toggle="tooltip" data-bs-placement="top" title="Mi perfil">
-						<i data-feather="user" class="feather"></i>
-					</a>
-	                <a href="<?= route_to('cambiar_password') ?>" class="link" data-bs-toggle="tooltip" data-bs-placement="top" title="Cambiar contraseña">
-						<i data-feather="lock" class="feather-sm"></i>
-					</a>
-	                <a href="<?= route_to('logout') ?>" class="link" data-bs-toggle="tooltip" data-bs-placement="top" title="Cerrar sesión">
-						<i data-feather="log-out" class="feather-sm"></i>
-					</a>
+	              
 	            </div>
 	            <!-- End Bottom points-->
 	        </aside>

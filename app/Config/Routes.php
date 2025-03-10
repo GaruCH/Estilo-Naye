@@ -6,9 +6,9 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-//******************************************************************************
-//********************         RUTAS DEL CLIENTE         ***********************
-//******************************************************************************
+//??????????????????????????????????????????????????????????????????????????????
+//????????????????????         RUTAS DEL CLIENTE         ???????????????????????
+//??????????????????????????????????????????????????????????????????????????????
 
 $routes->get('/', 'Clientes\Inicio::index', ['as' => 'cliente_inicio']);
 $routes->get('/catalogo', 'Clientes\Catalogo::index', ['as' => 'cliente_catalogo']);
@@ -16,9 +16,9 @@ $routes->get('/servicios', 'Clientes\Servicios::index', ['as' => 'cliente_servic
 $routes->get('/agenda', 'Clientes\Agenda::index', ['as' => 'cliente_agenda']);
 $routes->get('/contacto', 'Clientes\Contacto::index', ['as' => 'cliente_contacto']);
 
-//******************************************************************************
-//******************** RUTAS DEL PANEL DE ADMINISTRACIÓN ***********************
-//******************************************************************************
+//??????????????????????????????????????????????????????????????????????????????
+//???????????????????? RUTAS DEL PANEL DE ADMINISTRACIÓN ???????????????????????
+//??????????????????????????????????????????????????????????????????????????????
 
 $routes->get('/login', 'Usuarios\Login::index', ['as' => 'usuario_login']);
 $routes->post('/validar_usuario', 'Usuarios\Login::comprobar', ['as' => 'validar_usuario']);
@@ -39,15 +39,43 @@ $routes->get('/dashboard', 'Panel\Dashboard::index', ['as' => 'dashboard_superad
 
 //Usuarios
 $routes->get('/administracion_usuarios', 'Panel\Usuarios::index', ['as' => 'administracion_usuarios']);
-	$routes->post('/estatus_usuario', 'Panel\Usuarios::estatus', ['as' => 'estatus_usuario']);
-	$routes->post('/eliminar_usuario', 'Panel\Usuarios::eliminar', ['as' => 'eliminar_usuario']);
-	$routes->post('/restaurar_usuario', 'Panel\Usuarios::recuperar_usuario', ['as' => 'restaurar_usuario']);
-	$routes->post('/actualizar_password', 'Panel\Usuarios::actualizar_password', ['as' => 'actualizar_password']);
+$routes->post('/estatus_usuario', 'Panel\Usuarios::estatus', ['as' => 'estatus_usuario']);
+$routes->post('/eliminar_usuario', 'Panel\Usuarios::eliminar', ['as' => 'eliminar_usuario']);
+$routes->post('/restaurar_usuario', 'Panel\Usuarios::recuperar_usuario', ['as' => 'restaurar_usuario']);
+$routes->post('/actualizar_password', 'Panel\Usuarios::actualizar_password', ['as' => 'actualizar_password']);
 $routes->get('/nuevo_usuario', 'Panel\Usuario_nuevo::index', ['as' => 'nuevo_usuario']);
 $routes->post('/registrar_usuario', 'Panel\Usuario_nuevo::registrar', ['as' => 'registrar_usuario']);
 $routes->get('/detalles_usuario/(:num)', 'Panel\Usuario_detalles::index/$1', ['as' => 'detalles_usuario']);
-	$routes->post('/editar_usuario', 'Panel\Usuario_detalles::editar', ['as' => 'editar_usuario']);
-	//ejemplo
-	$routes->get('/ejemplo', 'Panel\Ejemplo::index', ['as' => 'ejemplo']);
+$routes->post('/editar_usuario', 'Panel\Usuario_detalles::editar', ['as' => 'editar_usuario']);
 
+// Servicios
+$routes->get('/administracion_servicios', 'Panel\Servicios::index', ['as' => 'administracion_servicios']);
+$routes->post('/estatus_servicio', 'Panel\Servicios::estatus_servicio', ['as' => 'estatus_servicio']);
+$routes->post('/eliminar_servicio', 'Panel\Servicios::eliminar_servicio', ['as' => 'eliminar_servicio']);
+$routes->post('/restaurar_servicio', 'Panel\Servicios::recuperar_servicio', ['as' => 'restaurar_servicio']);
 
+// Categorías
+$routes->get('/administracion_categorias', 'Panel\Categorias::index', ['as' => 'administracion_categorias']);
+$routes->post('/estatus_categoria', 'Panel\Categorias::estatus_categoria', ['as' => 'estatus_categoria']);
+$routes->post('/eliminar_categoria', 'Panel\Categorias::eliminar_categoria', ['as' => 'eliminar_categoria']);
+$routes->post('/restaurar_categoria', 'Panel\Categorias::recuperar_categoria', ['as' => 'restaurar_categoria']);
+
+// Productos
+$routes->get('/administracion_productos', 'Panel\Productos::index', ['as' => 'administracion_productos']);
+$routes->post('/estatus_producto', 'Panel\Productos::estatus_producto', ['as' => 'estatus_producto']);
+$routes->post('/eliminar_producto', 'Panel\Productos::eliminar_producto', ['as' => 'eliminar_producto']);
+$routes->post('/restaurar_producto', 'Panel\Productos::recuperar_producto', ['as' => 'restaurar_producto']);
+
+// Citas
+$routes->get('/administracion_citas', 'Panel\Citas::index', ['as' => 'administracion_citas']);
+$routes->post('/eliminar_cita', 'Panel\Citas::eliminar_cita', ['as' => 'eliminar_cita']);
+$routes->post('/restaurar_cita', 'Panel\Citas::recuperar_cita', ['as' => 'restaurar_cita']);
+
+// Productos_Categoria
+$routes->get('/administracion_productos_categorias', 'Panel\Productos_Categorias::index', ['as' => 'administracion_productos_categorias']);
+
+// Historial Productos
+$routes->get('/historial_productos_citas', 'Panel\Productos_Citas::index', ['as' => 'historial_productos_citas']);
+
+//ejemplo
+$routes->get('/ejemplo', 'Panel\Ejemplo::index', ['as' => 'ejemplo']);

@@ -83,8 +83,8 @@ defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest a
 //********************* CONSTANTES SISTEMA *******************************
 //************************************************************************
 //=================================SISTEMA======================================
-define("ACRONIMO_SISTEMA", 'ENE');
-define("NOMBRE_SISTEMA", 'Estilo Naye Studio');
+define("ACRONIMO_SISTEMA", 'ENNS');
+define("NOMBRE_SISTEMA", 'Estilo Naye Nails Studio');
 define("BACKGROUND_SISTEMA", '');
 define("FAV_ICON_SISTEMA", 'sin-fondo.png');
 define("LOGO_SISTEMA", 'logo_naye.svg');
@@ -174,6 +174,35 @@ define("TAREA_EJEMPLO", "tarea_ejemplo");
 // TAREA DASHBOARD
 define("TAREA_ADMIN_DASHBOARD", "tarea_admin_dashboard");
 
+// TAREA SERVICIO
+
+define("TAREA_SERVICIOS", "tarea_servicios");
+define("TAREA_SERVICIO_NUEVO", "tarea_servicio_nuevo");
+define("TAREA_SERVICIO_DETALLES", "tarea_servicio_detalles");
+
+// TAREA CATEGORIAS
+
+define("TAREA_CATEGORIAS", "tarea_categorias");
+define("TAREA_CATEGORIA_NUEVO", "tarea_categoria_nuevo");
+define("TAREA_CATEGORIA_DETALLES", "tarea_categoria_detalles");
+
+// TAREA PRODUCTOS
+
+define("TAREA_PRODUCTOS", "tarea_productos");
+define("TAREA_PRODUCTO_NUEVO", "tarea_producto_nuevo");
+define("TAREA_PRODUCTO_DETALLES", "tarea_producto_detalles");
+
+// TAREA CITAS
+
+define("TAREA_CITAS", "tarea_citas");
+define("TAREA_CITA_NUEVO", "tarea_citas_nuevo");
+define("TAREA_CITA_DETALLES", "tarea_citas_detalles");
+
+// TAREA CITAS_PRODUCTOS
+
+define("TAREA_CITAS_PRODUCTOS", "tarea_cita_productos");
+define("TAREA_CITA_PRODUCTO_NUEVO", "tarea_cita_producto_nuevo");
+define("TAREA_CITA_PRODUCTO_DETALLES", "tarea_cita_producto_detalles");
 
 // TAREA DASHBOARD
 define("TAREA_TRABAJADOR_DASHBOARD", "tarea_trabajador_dashboard");
@@ -191,8 +220,12 @@ define(
         TAREA_USUARIOS,
         TAREA_USUARIO_NUEVO,
         TAREA_USUARIO_DETALLES,
-        TAREA_EJEMPLO
-
+        TAREA_EJEMPLO,
+        TAREA_SERVICIOS,
+        TAREA_CITAS,
+        TAREA_CATEGORIAS,
+        TAREA_PRODUCTOS,
+        TAREA_CITAS_PRODUCTOS
     )
 );
 

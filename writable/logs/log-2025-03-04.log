@@ -1,0 +1,11 @@
+DEBUG - 2025-03-04 09:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 09:47:57 --> Usuario encontrado: Superadmin
+DEBUG - 2025-03-04 09:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 09:47:57 --> Redirigiendo a dashboard para el rol SUPERADMIN
+DEBUG - 2025-03-04 15:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-04 12:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 13:29:57 --> Usuario encontrado: Superadmin
+DEBUG - 2025-03-04 13:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 13:29:57 --> Redirigiendo a dashboard para el rol SUPERADMIN
+DEBUG - 2025-03-04 19:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-04 15:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

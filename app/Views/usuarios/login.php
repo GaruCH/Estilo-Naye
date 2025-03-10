@@ -7,9 +7,10 @@
     <title><?= $titulo_pag ?></title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="<?= base_url(RECURSOS_IMG . '/sin-fondo.png') ?>" type="image/x-icon">
+    <link rel="stylesheet" href="<?= base_url(RECURSOS_CSS . '/principal.css') ?>">
     <link href="<?= base_url(RECURSOS_PANEL_PLUGINS . '/toastr/dist/build/toastr.min.css'); ?>" rel="stylesheet">
     <link href="<?= base_url(RECURSOS_PANEL_PLUGINS . '/toastr/dist/build/toastr_manager.css'); ?>" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url(RECURSOS_CSS . '/principal.css') ?>">
+
 </head>
 
 <body class="bg-primario">
