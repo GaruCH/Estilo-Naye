@@ -184,14 +184,14 @@ function configurar_menu_lateral_panel($rol_actual = NULL)
         // Submenú - Historial de Productos
         $sub_menu_item = array();
         $sub_menu_item['is_active'] = FALSE;
-        $sub_menu_item['href'] = route_to('historial_productos');
+        $sub_menu_item['href'] = route_to('historial_citas_productos');
         $sub_menu_item['icon'] = 'fa fa-search-minus';
         $sub_menu_item['text'] = 'Historial Productos';
         $menu_item['submenu'][] = $sub_menu_item;
 
         $sub_menu_item = array();
         $sub_menu_item['is_active'] = FALSE;
-        $sub_menu_item['href'] = route_to('asignacion_categorias');
+        $sub_menu_item['href'] = route_to('administracion_productos_categorias');
         $sub_menu_item['icon'] = 'fa fa-search-minus';
         $sub_menu_item['text'] = 'Asignación categorías';
         $menu_item['submenu'][] = $sub_menu_item;

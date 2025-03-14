@@ -35,25 +35,47 @@ class Tabla_servicios extends Model
         } //end if el rol actual es superadmin
         else {
             $resultado = $this
-            ->select('id_servicio, nombre_servicio, descripcion_servicio, precio_servicio, estatus_servicio')
-            ->orderBy('nombre_servicio', 'ASC')
-            ->withDeleted()
-            ->findAll();
+                ->select('id_servicio, nombre_servicio, descripcion_servicio, precio_servicio, estatus_servicio')
+                ->orderBy('nombre_servicio', 'ASC')
+                ->withDeleted()
+                ->findAll();
         } //end else el rol actual es superadmin
         return $resultado;
     } //end datatable_usuarios
 
-    public function obtener_usuario($id_usuario = 0)
+    public function obtener_servicio($id_servicio = 0)
     {
         $resultado = $this
-            ->select('usuarios.id_usuario, personas.id_persona, personas.nombre, personas.ap_paterno, personas.ap_materno,
-                            personas.sexo, personas.correo, personas.imagen, usuario_roles.id_rol')
-            ->join('personas', 'usuarios.id_persona = personas.id_persona')
-            ->join('usuario_roles', 'usuarios.id_usuario = usuario_roles.id_usuario')
-            ->where('usuarios.id_usuario', $id_usuario)
+            ->select('id_servicio, nombre_servicio, descripcion_servicio, precio_servicio')
+            ->where('id_servicio', $id_servicio)
             ->first();
         return $resultado;
-    } //end obtener_usuario
+    } //end obtener_servicio
+
+    public function existe_nombre_excepto_actual($nombre = NULL, $id_servicio = 0)
+    {
+        $resultado = $this
+            ->select('id_servicio, nombre_servicio, eliminacion')
+            ->where('nombre_servicio', $nombre)
+            ->withDeleted()
+            ->first();
+        $opcion = -1;
+        if ($resultado != NULL) {
+            if ($resultado->id_servicio == $id_servicio) {
+                $opcion = -1;
+            } //end if servicio encontrado es el actual
+            else {
+                if ($resultado->eliminacion == null) {
+                    $opcion = 2;
+                } //end if nombre no eliminado
+                else {
+                    $opcion = -100;
+                } //end else
+            } //end else servicio encontrado es el actual
+        } //end if existe registro
+
+        return $opcion;
+    } //end existe_nombre_excepto_actual
 
 
-}//End Model usuarios
+}//End Model servicios

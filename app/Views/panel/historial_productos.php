@@ -25,11 +25,10 @@
                         <thead class="text-center">
                             <tr>
                                 <th class="special-cell">#</th>
-                                <th class="special-cell">Nombre</th>
-                                <th class="special-cell">Descripción</th>
+                                <th class="special-cell">Paciente</th>
+                                <th class="special-cell">Producto</th>
                                 <th class="special-cell">Cantidad</th>
-                                <th class="special-cell">Stock Minimo</th>
-                                <th class="special-cell">Categoría</th>
+                                <th class="special-cell">Fecha cita</th>
                             </tr>
                         </thead>
                         <tbody>

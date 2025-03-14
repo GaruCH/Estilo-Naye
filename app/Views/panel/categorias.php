@@ -15,7 +15,7 @@
 
 <div class="row">
     <div class="col-12">
-        <a type="button" class="btn btn-primary" href="<?= route_to('nueva_categoria') ?>" style="margin-bottom: 15px;">
+        <a type="button" class="btn btn-primary" href="<?= route_to('nuevo_categoria') ?>" style="margin-bottom: 15px;">
             <i class="fas fa-lg fa-plus-circle"></i> Agregar nueva categoría
         </a>
         <div class="card">
@@ -49,31 +49,31 @@
                                          '</td>';
                                     echo '<td class="special-cell text-center" nowrap="nowrap">';
                                     if(isset($categoria->eliminacion)){
-                    					echo '<button type="button" class="btn btn-light-danger text-danger recover-user btn-circle" id="recover-user_'.$categoria->id_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuperar el usuario">
+                    					echo '<button type="button" class="btn btn-light-danger text-danger recover-categoria btn-circle" id="recover-categoria_'.$categoria->id_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuperar el categoria">
                     							<i data-feather="rotate-ccw" class="feather fill-white"></i>
                     						  </button>';
-                    				}//end if el usuario ha sido eliminado
+                    				}//end if el categoria ha sido eliminado
                                     else{
                                         if(($categoria->estatus_categoria) == ESTATUS_HABILITADO)
-                                            echo '<button type="button" class="btn btn-success estatus btn-circle" id="'.$categoria->id_categoria.'_'.$categoria->estatus_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Deshabilitar al usuario">
+                                            echo '<button type="button" class="btn btn-success estatus btn-circle" id="'.$categoria->id_categoria.'_'.$categoria->estatus_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Deshabilitar al categoria">
                                                         <i data-feather="toggle-right" class="feather fill-white"></i>
                                                   </button>';
                                         else
-                                            echo '<button type="button" class="btn btn-secondary estatus btn-circle" id="'.$categoria->id_categoria.'_'.$categoria->estatus_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Habilitar al usuario">
+                                            echo '<button type="button" class="btn btn-secondary estatus btn-circle" id="'.$categoria->id_categoria.'_'.$categoria->estatus_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Habilitar al categoria">
                                                         <i data-feather="toggle-left" class="feather fill-white"></i>
                                                   </button>';
                                         echo '&nbsp;&nbsp;&nbsp;';
-                                        echo '<a type="button" href="'.route_to('detalles_usuario', $categoria->id_categoria).'" class="btn btn-warning btn-circle" id="'.$categoria->id_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar al usuario">
+                                        echo '<a type="button" href="'.route_to('detalles_categoria', $categoria->id_categoria).'" class="btn btn-warning btn-circle" id="'.$categoria->id_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar al categoria">
                                                     <i data-feather="edit-3" class="feather fill-white"></i>
                                               </a>';
                                         echo '&nbsp;&nbsp;&nbsp;';
-                                        echo '<button type="button" class="btn btn-danger eliminar btn-circle" id="'.$categoria->id_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar al usuario">
+                                        echo '<button type="button" class="btn btn-danger eliminar-categoria btn-circle" id="'.$categoria->id_categoria.'" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar al categoria">
                                                     <i data-feather="trash-2" class="feather fill-white"></i>
                                               </button>';
-                                    }//end else el usuario ha sido eliminado
+                                    }//end else el categoria ha sido eliminado
                                     echo '</td>';
                                     echo '</tr>';
-                                }//end foreach usuarios
+                                }//end foreach categorias
                                 
                             ?>
                         </tbody>

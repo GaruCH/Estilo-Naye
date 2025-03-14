@@ -40,19 +40,41 @@ class Tabla_categorias extends Model
             ->findAll();
         } //end else el rol actual es superadmin
         return $resultado;
-    } //end datatable_usuarios
+    } //end datatable_categorias
 
-    public function obtener_usuario($id_usuario = 0)
+    public function obtener_categoria($id_categoria = 0)
     {
         $resultado = $this
-            ->select('usuarios.id_usuario, personas.id_persona, personas.nombre, personas.ap_paterno, personas.ap_materno,
-                            personas.sexo, personas.correo, personas.imagen, usuario_roles.id_rol')
-            ->join('personas', 'usuarios.id_persona = personas.id_persona')
-            ->join('usuario_roles', 'usuarios.id_usuario = usuario_roles.id_usuario')
-            ->where('usuarios.id_usuario', $id_usuario)
+            ->select('id_categoria, nombre_categoria, descripcion_categoria')
+            ->where('categorias.id_categoria', $id_categoria)
             ->first();
         return $resultado;
-    } //end obtener_usuario
+    } //end obtener_categoria
+
+    public function existe_nombre_excepto_actual($nombre = NULL, $id_categoria = 0)
+    {
+        $resultado = $this
+            ->select('id_categoria, nombre_categoria, eliminacion')
+            ->where('nombre_categoria', $nombre)
+            ->withDeleted()
+            ->first();
+        $opcion = -1;
+        if ($resultado != NULL) {
+            if ($resultado->id_categoria == $id_categoria) {
+                $opcion = -1;
+            } //end if categoria encontrada es la actual
+            else {
+                if ($resultado->eliminacion == null) {
+                    $opcion = 2;
+                } //end if nombre no eliminado
+                else {
+                    $opcion = -100;
+                } //end else
+            } //end else categoria encontrada es la actual
+        } //end if existe registro
+
+        return $opcion;
+    } //end existe_nombre_excepto_actual
 
 
-}//End Model usuarios
+}//End Model categorias

@@ -57,7 +57,7 @@
                                     '</td>';
                                 echo '<td class="special-cell text-center" nowrap="nowrap">';
                                 if (isset($producto->eliminacion)) {
-                                    echo '<button type="button" class="btn btn-light-danger text-danger recover-producto btn-circle" id="recover-user_' . $producto->id_producto . '" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuperar el producto">
+                                    echo '<button type="button" class="btn btn-light-danger text-danger recover-producto btn-circle" id="recover-producto_' . $producto->id_producto . '" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuperar el producto">
                     							<i data-feather="rotate-ccw" class="feather fill-white"></i>
                     						  </button>';
                                 } //end if el producto ha sido eliminado

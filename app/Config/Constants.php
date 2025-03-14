@@ -186,6 +186,10 @@ define("TAREA_CATEGORIAS", "tarea_categorias");
 define("TAREA_CATEGORIA_NUEVO", "tarea_categoria_nuevo");
 define("TAREA_CATEGORIA_DETALLES", "tarea_categoria_detalles");
 
+// TAREA ASIGNACION CATEGORIAS
+
+define("TAREA_PRODUCTOS_CATEGORIAS", "tarea_productos_categorias");
+define("TAREA_PRODUCTOS_CATEGORIAS_DETALLES", "tarea_productos_categorias_detalles");
 // TAREA PRODUCTOS
 
 define("TAREA_PRODUCTOS", "tarea_productos");
@@ -222,10 +226,18 @@ define(
         TAREA_USUARIO_DETALLES,
         TAREA_EJEMPLO,
         TAREA_SERVICIOS,
+        TAREA_SERVICIO_NUEVO,
+        TAREA_SERVICIO_DETALLES,
         TAREA_CITAS,
         TAREA_CATEGORIAS,
+        TAREA_CATEGORIA_NUEVO,
+        TAREA_CATEGORIA_DETALLES,
         TAREA_PRODUCTOS,
-        TAREA_CITAS_PRODUCTOS
+        TAREA_PRODUCTO_NUEVO,
+        TAREA_PRODUCTO_DETALLES,
+        TAREA_CITAS_PRODUCTOS,
+        TAREA_PRODUCTOS_CATEGORIAS,
+        TAREA_PRODUCTOS_CATEGORIAS_DETALLES
     )
 );
 

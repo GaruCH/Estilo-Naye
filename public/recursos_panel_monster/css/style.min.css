@@ -17500,8 +17500,8 @@ fieldset:disabled .btn {
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
   color: #fff;
-  background-color: #6352ca;
-  border-color: #5d4dbe;
+  background-color: #2A8C82;
+  border-color: #0F97A6;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.15),
     0 0 0 0 rgba(137, 120, 241, 0.5);
@@ -17512,8 +17512,8 @@ fieldset:disabled .btn {
 .btn-primary:active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #5d4dbe;
-  border-color: #5748b3;
+  background-color: #2A8C82;
+  border-color: #0F97A6;
 }
 .btn-check:active + .btn-primary:focus,
 .btn-check:checked + .btn-primary:focus,
