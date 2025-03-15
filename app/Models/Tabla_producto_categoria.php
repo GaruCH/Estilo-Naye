@@ -24,26 +24,35 @@ class Tabla_producto_categoria extends Model
     {
 
         $resultado = $this
-            ->select('productos.nombre_producto, productos.descripcion_producto, categorias.nombre_categoria, categorias.descripcion_categoria')
+            ->select('productos.nombre_producto, productos.descripcion_producto, categorias.nombre_categoria, categorias.descripcion_categoria,
+            producto_categoria.id_producto,  producto_categoria.id_categoria ')
             ->join('categorias', 'producto_categoria.id_categoria = categorias.id_categoria')
             ->join('productos', 'producto_categoria.id_producto = productos.id_producto')
             ->orderBy('productos.nombre_producto', 'ASC')
             ->findAll();
 
         return $resultado;
-    } //end datatable_usuarios
+    } //end datatable_producto_categoria
 
-    public function obtener_usuario($id_usuario = 0)
+    public function obtener_producto_categoria($id_producto = 0, $id_categoria = 0)
     {
         $resultado = $this
-            ->select('usuarios.id_usuario, personas.id_persona, personas.nombre, personas.ap_paterno, personas.ap_materno,
-                            personas.sexo, personas.correo, personas.imagen, usuario_roles.id_rol')
-            ->join('personas', 'usuarios.id_persona = personas.id_persona')
-            ->join('usuario_roles', 'usuarios.id_usuario = usuario_roles.id_usuario')
-            ->where('usuarios.id_usuario', $id_usuario)
+            ->select('productos.nombre_productos, productos.id_producto, categorias.id_categoria')
+            ->join('categorias', 'producto_categoria.id_categoria = categorias.id_categoria')
+            ->join('productos', 'producto_categoria.id_producto = productos.id_producto')
+            ->where('producto_categoria.id_producto', $id_producto)
+            ->where('producto_categoria.id_categoria', $id_categoria)
             ->first();
         return $resultado;
-    } //end obtener_usuario
+    } //end obtener_producto_categoria
 
-
-}//End Model usuarios
+    public function obtener_categorias_asignadas($id_producto = 0)
+    {
+        $resultado = $this
+            ->select('categorias.id_categoria')
+            ->join('categorias', 'producto_categoria.id_categoria = categorias.id_categoria')
+            ->where('producto_categoria.id_producto', $id_producto)
+            ->findAll();
+            return $resultado;
+    }
+}//End Model producto_categorias

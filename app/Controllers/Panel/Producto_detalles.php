@@ -31,7 +31,7 @@ class Producto_detalles extends BaseController
                 return redirect()->to(route_to('administracion_productos'));
             } else {
 
-                return $this->crear_vista("panel/producto_detalles", $this->cargar_datos($producto));
+                return $this->crear_vista("panel/producto_detalles", $this->cargar_datos($producto, $id_producto));
             }
         } else {
             mensaje('No tienes permisos para acceder a esta sección.', DANGER_ALERT, '¡Acceso no autorizado!');
@@ -40,7 +40,7 @@ class Producto_detalles extends BaseController
     }
 
 
-    private function cargar_datos($producto = NULL)
+    private function cargar_datos($producto = NULL, $id = 0)
     {
         //======================================================================
         //==========================DATOS FUNDAMENTALES=========================
@@ -58,7 +58,14 @@ class Producto_detalles extends BaseController
         //======================================================================
         $datos['nombre_pagina'] = 'Detalles producto';
         //Cargar modelos
+        $id_producto = (int) $id;
         $datos['producto'] = $producto;
+        $tabla_categorias = new \App\Models\Tabla_categorias;
+        $datos['categorias'] = $tabla_categorias->obtener_categorias();
+        $tabla_producto_categoria = new \App\Models\Tabla_producto_categoria;
+        $categorias_asignadas = $tabla_producto_categoria->obtener_categorias_asignadas($id_producto);
+        $datos['categorias_asignadas'] = array_column($categorias_asignadas, 'id_categoria');
+
 
         //Breadcrumb
         $navegacion = array(
@@ -111,6 +118,7 @@ class Producto_detalles extends BaseController
             }
 
             $tabla_productos = new \App\Models\Tabla_productos;
+            $tabla_producto_categoria = new \App\Models\Tabla_producto_categoria;
 
             $producto = [
                 'nombre_producto' => $this->request->getPost('nombre_producto'),
@@ -119,20 +127,48 @@ class Producto_detalles extends BaseController
                 'stock_minimo_producto' => $this->request->getPost('stock_minimo_producto')
             ];
 
-            // Verificar si el nombre del producto ya existe (except o el actual)
+            // Verificar si el nombre del producto ya existe (excepto el actual)
             $opcion = $tabla_productos->existe_nombre_excepto_actual($producto['nombre_producto'], $id_producto);
             if ($opcion == 2 || $opcion == -100) {
                 mensaje("El nombre del producto ya está en uso.", WARNING_ALERT, "¡Nombre en uso!");
                 return $this->index($id_producto);
             }
 
+            // Obtener las nuevas categorías seleccionadas
+            $categorias_seleccionadas = $this->request->getPost('categorias');
+
+            // Iniciar una transacción para asegurar la integridad de los datos
+            $db = \Config\Database::connect();
+            $db->transStart();
+
             try {
-                // Actualizar información del producto
+                // 1. Actualizar la información del producto
                 $tabla_productos->update($id_producto, $producto);
 
-                mensaje("El producto ha sido actualizado exitosamente", SUCCESS_ALERT, "¡Actualización exitosa!");
+                // 2. Eliminar las categorías actuales del producto en producto_categoria
+                $tabla_producto_categoria->where('id_producto', $id_producto)->delete();
+
+                // 3. Insertar las nuevas categorías seleccionadas
+                if (!empty($categorias_seleccionadas)) {
+                    foreach ($categorias_seleccionadas as $id_categoria) {
+                        $tabla_producto_categoria->insert([
+                            'id_producto' => $id_producto,
+                            'id_categoria' => $id_categoria
+                        ]);
+                    }
+                }
+
+                // Confirmar la transacción
+                $db->transComplete();
+
+                if ($db->transStatus() === false) {
+                    throw new \Exception("Error en la actualización del producto y sus categorías.");
+                }
+
+                mensaje("El producto y sus categorías han sido actualizados exitosamente", SUCCESS_ALERT, "¡Actualización exitosa!");
                 return redirect()->to(route_to('detalles_producto', $id_producto));
             } catch (\Exception $e) {
+                $db->transRollback();
                 mensaje("Hubo un error al actualizar el producto. Intente nuevamente, por favor", DANGER_ALERT, "¡Error al actualizar!");
                 return redirect()->to(route_to('detalles_producto', $id_producto));
             }

@@ -102,22 +102,38 @@
                     </div>
                 </div>
 
-                <div class="text-center">
-                    <a type="button" href="<?= route_to('administracion_productos') ?>" class="btn btn-danger">
-                        <i class="fa fa-times"></i> Cancelar
-                    </a>
-                    &nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-primary" type="submit" id="btn-guardar">
-                        <i class="fa fa-lg fa-save"></i> Registrar producto
-                    </button>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-control-label">Categorías del producto: (<font color="red">*</font>)</label>
+                        <select class="form-control" id="categorias" name="categorias[]" multiple="multiple">
+                            <?php foreach ($categorias as $categoria) : ?>
+                                <option value="<?= $categoria->id_categoria ?>">
+                                    <?= $categoria->nombre_categoria ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
                 </div>
 
-                <?= form_close() ?>
 
             </div>
-        </div>
 
+            <div class="text-center">
+                <a type="button" href="<?= route_to('administracion_productos') ?>" class="btn btn-danger">
+                    <i class="fa fa-times"></i> Cancelar
+                </a>
+                &nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" type="submit" id="btn-guardar">
+                    <i class="fa fa-lg fa-save"></i> Registrar producto
+                </button>
+            </div>
+
+            <?= form_close() ?>
+
+        </div>
     </div>
+
+</div>
 </div>
 
 <?= $this->endSection(); ?>
@@ -125,6 +141,11 @@
 <?= $this->section("js") ?>
 <!-- Preview Image -->
 <script src="<?php echo base_url(RECURSOS_PANEL_JS . "/owns/preview-image.js") ?>"></script>
+
+
+<!-- Select2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
 
 <!-- SweetAlert 2 -->
 <script src="<?php echo base_url(RECURSOS_PANEL_PLUGINS . "/sweetalert2/dist/sweetalert2.all.min.js") ?>"></script>

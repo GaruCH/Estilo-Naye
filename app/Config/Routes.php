@@ -84,7 +84,7 @@ $routes->post('/restaurar_cita', 'Panel\Citas::recuperar_cita', ['as' => 'restau
 
 // Productos_Categoria
 $routes->get('/administracion_productos_categorias', 'Panel\Productos_categorias::index', ['as' => 'administracion_productos_categorias']);
-
+//$routes->get('/detalles_producto/(:num)/(:num)', 'Panel\Producto_detalles::index/$1/$2', ['as' => 'detalles_producto']);
 // Historial Productos
 $routes->get('/historial_citas_productos', 'Panel\Citas_productos::index', ['as' => 'historial_citas_productos']);
 

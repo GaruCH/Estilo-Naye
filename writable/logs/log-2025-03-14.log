@@ -19,3 +19,146 @@ DEBUG - 2025-03-14 00:21:03 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-03-14 00:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-03-14 00:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-03-14 00:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 22:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 16:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 16:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-14 16:41:53 --> Credenciales incorrectas para el email: gabrielch1805@gmail.com
+DEBUG - 2025-03-14 16:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-14 16:43:23 --> Usuario encontrado: Superadmin
+DEBUG - 2025-03-14 16:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-14 16:43:23 --> Redirigiendo a dashboard para el rol SUPERADMIN
+DEBUG - 2025-03-14 22:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 22:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 22:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 22:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 22:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 22:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 23:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 23:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 23:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 23:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-14 23:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-14 18:54:35 --> ErrorException: Attempt to read property "id_categoria" on string
+[Method: GET, Route: nuevo_producto]
+in APPPATH\Views\panel\producto_nuevo.php on line 110.
+ 1 APPPATH\Views\panel\producto_nuevo.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_categoria" on string', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_nuevo.php', 110)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_nuevo.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/producto_nuevo', [], true)
+ 5 APPPATH\Controllers\Panel\Producto_nuevo.php(91): view('panel/producto_nuevo', [...])
+ 6 APPPATH\Controllers\Panel\Producto_nuevo.php(27): App\Controllers\Panel\Producto_nuevo->crear_vista('panel/producto_nuevo', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_nuevo->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_nuevo))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-14 18:54:48 --> ErrorException: Undefined property: stdClass::$clave
+[Method: GET, Route: nuevo_producto]
+in APPPATH\Models\Tabla_categorias.php on line 89.
+ 1 APPPATH\Models\Tabla_categorias.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$clave', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Models\\Tabla_categorias.php', 89)
+ 2 APPPATH\Controllers\Panel\Producto_nuevo.php(54): App\Models\Tabla_categorias->obtener_categorias()
+ 3 APPPATH\Controllers\Panel\Producto_nuevo.php(27): App\Controllers\Panel\Producto_nuevo->cargar_datos()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_nuevo->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_nuevo))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-14 18:56:15 --> ErrorException: Attempt to read property "id_categoria" on string
+[Method: GET, Route: nuevo_producto]
+in APPPATH\Views\panel\producto_nuevo.php on line 110.
+ 1 APPPATH\Views\panel\producto_nuevo.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_categoria" on string', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_nuevo.php', 110)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_nuevo.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/producto_nuevo', [], true)
+ 5 APPPATH\Controllers\Panel\Producto_nuevo.php(91): view('panel/producto_nuevo', [...])
+ 6 APPPATH\Controllers\Panel\Producto_nuevo.php(27): App\Controllers\Panel\Producto_nuevo->crear_vista('panel/producto_nuevo', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_nuevo->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_nuevo))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+DEBUG - 2025-03-14 22:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-14 22:34:41 --> Usuario encontrado: Superadmin
+DEBUG - 2025-03-14 22:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-14 22:34:41 --> Redirigiendo a dashboard para el rol SUPERADMIN
+CRITICAL - 2025-03-14 22:37:37 --> ErrorException: Undefined variable $categorias
+[Method: GET, Route: detalles_producto/11]
+in APPPATH\Views\panel\producto_detalles.php on line 112.
+ 1 APPPATH\Views\panel\producto_detalles.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php', 112)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/producto_detalles', [], true)
+ 5 APPPATH\Controllers\Panel\Producto_detalles.php(83): view('panel/producto_detalles', [...])
+ 6 APPPATH\Controllers\Panel\Producto_detalles.php(34): App\Controllers\Panel\Producto_detalles->crear_vista('panel/producto_detalles', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_detalles->index('11')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_detalles))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-14 22:39:54 --> ErrorException: Undefined variable $categorias_asignadas
+[Method: GET, Route: detalles_producto/11]
+in APPPATH\Views\panel\producto_detalles.php on line 114.
+ 1 APPPATH\Views\panel\producto_detalles.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias_asignadas', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php', 114)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/producto_detalles', [], true)
+ 5 APPPATH\Controllers\Panel\Producto_detalles.php(84): view('panel/producto_detalles', [...])
+ 6 APPPATH\Controllers\Panel\Producto_detalles.php(34): App\Controllers\Panel\Producto_detalles->crear_vista('panel/producto_detalles', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_detalles->index('11')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_detalles))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-14 22:49:10 --> TypeError: Illegal offset type
+[Method: GET, Route: detalles_producto/11]
+in APPPATH\Controllers\Panel\Producto_detalles.php on line 66.
+ 1 APPPATH\Controllers\Panel\Producto_detalles.php(34): App\Controllers\Panel\Producto_detalles->cargar_datos(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_detalles->index('11')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_detalles))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-14 22:50:19 --> ErrorException: Undefined variable $categorias
+[Method: GET, Route: detalles_producto/11]
+in APPPATH\Views\panel\producto_detalles.php on line 112.
+ 1 APPPATH\Views\panel\producto_detalles.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php', 112)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/producto_detalles', [], true)
+ 5 APPPATH\Controllers\Panel\Producto_detalles.php(91): view('panel/producto_detalles', [...])
+ 6 APPPATH\Controllers\Panel\Producto_detalles.php(34): App\Controllers\Panel\Producto_detalles->crear_vista('panel/producto_detalles', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_detalles->index('11')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_detalles))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-14 22:51:18 --> ErrorException: Undefined variable $categorias
+[Method: GET, Route: detalles_producto/11]
+in APPPATH\Views\panel\producto_detalles.php on line 112.
+ 1 APPPATH\Views\panel\producto_detalles.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php', 112)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\producto_detalles.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/producto_detalles', [], true)
+ 5 APPPATH\Controllers\Panel\Producto_detalles.php(91): view('panel/producto_detalles', [...])
+ 6 APPPATH\Controllers\Panel\Producto_detalles.php(34): App\Controllers\Panel\Producto_detalles->crear_vista('panel/producto_detalles', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Producto_detalles->index('11')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Producto_detalles))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')

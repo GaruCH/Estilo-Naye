@@ -4,6 +4,7 @@ namespace App\Controllers\Panel;
 
 use App\Controllers\BaseController;
 use App\Libraries\Permisos;
+use App\Models\Tabla_categorias;
 
 class Producto_nuevo extends BaseController
 {
@@ -49,7 +50,8 @@ class Producto_nuevo extends BaseController
         //======================================================================
         $datos['nombre_pagina'] = 'Nuevo producto';
         //Cargar modelos
-
+        $tabla_categorias = new \App\Models\Tabla_categorias;
+        $datos['categorias'] = $tabla_categorias->obtener_categorias();
         //Breadcrumb
         $navegacion = array(
             array(
@@ -93,6 +95,7 @@ class Producto_nuevo extends BaseController
     {
         if ($this->permitido) {
             $tabla_productos = new \App\Models\Tabla_productos;
+            $tabla_producto_categoria = new \App\Models\Tabla_producto_categoria;
 
             $producto = [
                 'nombre_producto' => $this->request->getPost('nombre_producto'),
@@ -102,8 +105,26 @@ class Producto_nuevo extends BaseController
                 'estatus_producto' => 2
             ];
 
+            // Obtener las categorías seleccionadas
+            $categorias = $this->request->getPost('categorias');
+
             try {
+                // 1. Insertar el producto
                 $tabla_productos->insert($producto);
+
+                // Obtener el ID generado automáticamente
+                $id_producto = $tabla_productos->insertID();
+
+                // 2. Insertar las relaciones en producto_categoria
+                if (!empty($categorias)) {
+                    foreach ($categorias as $id_categoria) {
+                        $data = [
+                            'id_producto' => $id_producto,
+                            'id_categoria' => $id_categoria
+                        ];
+                        $tabla_producto_categoria->insert($data);
+                    }
+                }
 
                 mensaje("El producto ha sido registrado exitosamente.", SUCCESS_ALERT, "¡Registro exitoso!");
                 return redirect()->to(route_to('administracion_productos'));

@@ -181,6 +181,20 @@ CREATE TABLE producto_categoria (
     FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
+-- Asignación de productos a categorías
+INSERT INTO producto_categoria (id_producto, id_categoria) VALUES
+(1, 1), -- Crema Hidratante para Pies → Cremas y Lociones
+(2, 2), -- Spray Antifúngico → Antimicóticos
+(3, 3), -- Plantillas Ortopédicas → Plantillas y Ortopedia
+(4, 4), -- Tijeras Podológicas → Instrumental Podológico
+(5, 5), -- Calcetines de Compresión → Calcetines y Medias Terapéuticas
+(6, 6), -- Polvo Antitranspirante → Desodorantes y Antitranspirantes
+(7, 7), -- Lima para Pies → Cuidado de Uñas
+(8, 8), -- Protectores de Juanetes → Protectores y Apósitos
+(9, 8), -- Venda Adhesiva para Callos → Protectores y Apósitos
+(10, 7); -- Solución para Uñas Engrosadas → Cuidado de Uñas
+
+
 
 -- Tabla de relación entre citas y productos utilizados en ellas
 CREATE TABLE citas_productos (

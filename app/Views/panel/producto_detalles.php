@@ -103,8 +103,23 @@
                         </div>
                     </div>
 
-                    <!-- Estatus del producto -->
                 </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-control-label">Categorías del producto: (<font color="red">*</font>)</label>
+                        <select class="form-control" id="categorias" name="categorias[]" multiple="multiple">
+                            <?php foreach ($categorias as $categoria) : ?>
+                                <option value="<?= $categoria->id_categoria ?>"
+                                    <?= in_array($categoria->id_categoria, $categorias_asignadas) ? 'selected' : '' ?>>
+                                    <?= $categoria->nombre_categoria ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+
+
 
                 <!-- Campo oculto para ID del producto -->
                 <?php
@@ -140,6 +155,9 @@
 <?= $this->section("js") ?>
 <!-- Preview Image -->
 <script src="<?php echo base_url(RECURSOS_PANEL_JS . "/owns/preview-image.js") ?>"></script>
+
+<!-- Select2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 <!-- SweetAlert 2 -->
 <script src="<?php echo base_url(RECURSOS_PANEL_PLUGINS . "/sweetalert2/dist/sweetalert2.all.min.js") ?>"></script>

@@ -34,10 +34,10 @@ class Tabla_categorias extends Model
         } //end if el rol actual es superadmin
         else {
             $resultado = $this
-            ->select('id_categoria, nombre_categoria, descripcion_categoria, estatus_categoria')
-            ->orderBy('nombre_categoria', 'ASC')
-            ->withDeleted()
-            ->findAll();
+                ->select('id_categoria, nombre_categoria, descripcion_categoria, estatus_categoria')
+                ->orderBy('nombre_categoria', 'ASC')
+                ->withDeleted()
+                ->findAll();
         } //end else el rol actual es superadmin
         return $resultado;
     } //end datatable_categorias
@@ -76,5 +76,16 @@ class Tabla_categorias extends Model
         return $opcion;
     } //end existe_nombre_excepto_actual
 
+    public function obtener_categorias()
+    {
 
+        $resultado = $this
+            ->select('id_categoria , nombre_categoria ')
+            ->orderBy('nombre_categoria', 'ASC')
+            ->findAll();
+
+       
+        return $resultado;
+    } //end obtener_categorias
+    
 }//End Model categorias
