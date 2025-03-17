@@ -34,16 +34,16 @@ CREATE TABLE personas (
 ) ENGINE=InnoDB;
 
 INSERT INTO personas (creacion, actualizacion, codigo_persona, nombre, ap_paterno, ap_materno, sexo, correo, id_tipo_persona) VALUES
-    (current_timestamp(), current_timestamp(), 'C0001', 'Superadmin', 'Paterno', 'Materno', 2, 'superadmin@esnaye.com', 201),
-    (current_timestamp(), current_timestamp(), 'C0002', 'Admin', 'Paterno', 'Materno', 2, 'admin@esnaye.com', 201),
-    (current_timestamp(), current_timestamp(), 'C0003', 'Trabajador', 'Paterno', 'Materno', 2, 'trabajador@esnaye.com', 201);
+    (current_timestamp(), current_timestamp(), 'P0001', 'Superadmin', 'Paterno', 'Materno', 2, 'superadmin@esnaye.com', 201),
+    (current_timestamp(), current_timestamp(), 'P0002', 'Admin', 'Paterno', 'Materno', 2, 'admin@esnaye.com', 201),
+    (current_timestamp(), current_timestamp(), 'P0003', 'Trabajador', 'Paterno', 'Materno', 2, 'trabajador@esnaye.com', 201);
 
 INSERT INTO personas (creacion, actualizacion, codigo_persona, id_tipo_persona, nombre, ap_paterno, ap_materno, telefono, sexo, correo, imagen) VALUES
-    (current_timestamp(), current_timestamp(), 'C0004', 101, 'Juan', 'Pérez', 'Gómez', '5551234567', 1, 'juan.perez@example.com', NULL),
-    (current_timestamp(), current_timestamp(), 'C0005', 101, 'María', 'López', 'Ramírez', '5557654321', 0, 'maria.lopez@example.com', NULL),
-    (current_timestamp(), current_timestamp(), 'C0006', 101, 'Carlos', 'Martínez', NULL, '5559876543', 1, 'carlos.martinez@example.com', NULL),
-    (current_timestamp(), current_timestamp(), 'C0007', 101, 'Ana', 'Hernández', 'Torres', '5553456789', 0, 'ana.hernandez@example.com', NULL),
-    (current_timestamp(), current_timestamp(), 'C0008', 101, 'Luis', 'García', 'Díaz', '5556781234', 1, 'luis.garcia@example.com', NULL);
+    (current_timestamp(), current_timestamp(), 'P0004', 101, 'Juan', 'Pérez', 'Gómez', '5551234567', 1, 'juan.perez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'P0005', 101, 'María', 'López', 'Ramírez', '5557654321', 0, 'maria.lopez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'P0006', 101, 'Carlos', 'Martínez', NULL, '5559876543', 1, 'carlos.martinez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'P0007', 101, 'Ana', 'Hernández', 'Torres', '5553456789', 0, 'ana.hernandez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'P0008', 101, 'Luis', 'García', 'Díaz', '5556781234', 1, 'luis.garcia@example.com', NULL);
 
 
 
