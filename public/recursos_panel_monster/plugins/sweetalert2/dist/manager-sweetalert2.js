@@ -52,6 +52,25 @@ const tipo_estatus = (estatus) => {
 };//end tipo_estatus
 
 
+const tipo_estatus_cita_confirmar = (estatus) => {
+    if(estatus === "1") {
+        return 'confirmar';
+    }//end if
+    else {
+        return 'pendiente';
+    }//end else
+};//end tipo_estatus
+
+const tipo_estatus_cita_cancelar = (estatus) => {
+    if(estatus === "1") {
+        return 'cancelar';
+    }//end if
+    else {
+        return 'pendiente';
+    }//end else
+};//end tipo_estatus
+
+
 //============================================
 //FUNCIÓN PARA OBTENER EL ESTATUS
 //============================================
@@ -68,7 +87,24 @@ const obtener_estatus = (estatus) => {
     }//end else
 };//end tipo_estatus
 
+const obtener_estatus_cita_confirmar = (estatus) => {
+    if(estatus === "1") {
+        return 2;
+    }//end if
+    else {
+        return 1;
+    }//end else
+};//end tipo_estatus
 
+
+const obtener_estatus_cita_cancelar = (estatus) => {
+    if(estatus === "1") {
+        return -1;
+    }//end if
+    else {
+        return 1;
+    }//end else
+};//end tipo_estatus
 //============================================
 //FUNCIÓN PARA CAMBIAR ESTATUS
 //============================================
@@ -126,6 +162,95 @@ const cambiar_estatus = (array, url=null) => {
             })
             .catch(error => {
                 alerta_modal('¡Error!', 'Ocurrió un error al actualizar el estatus', 2);
+            });
+        }//end if se actualiza estatus
+    });
+};//end cambiar_estatus
+
+const cambiar_estatus_cita_confirmar = (array, url=null) => {
+    Swal.fire({
+        title: "¿Estás seguro de " + tipo_estatus_cita_confirmar(array[2]) + " " + array[3] + "?",
+        text: "Al "+tipo_estatus_cita_confirmar(array[2])+" "+array[3]+" "+(array[2] === "2" ? 'no ' :'')+array[4],
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: '#7bb13c',
+        cancelButtonColor: '#e84646',
+        confirmButtonText: 'Sí, ' + tipo_estatus_cita_confirmar(array[2]),
+        cancelButtonText: 'Regresar',
+        reverseButtons: true
+    })
+    .then((result) => {
+        if(result.isConfirmed) {
+            let data = new FormData();
+            data.append('id', array[1]);
+            data.append('estatus', obtener_estatus_cita_confirmar(array[2]));
+
+            fetch(array[0], {
+                method: 'POST',
+                body: data
+            })
+            .then(res => {
+                if(!res.ok) {
+                    throw new Error('Ocurrió un error');
+                }//end if
+                return res.json();
+            })
+            .then(respuesta => {
+                if(respuesta.error == 0){
+                    alerta_modal('¡Estado Actualizado!', '¡El estado ha sido actualizado exitosamente!', 1);
+                    window.location = url;
+                }//end if se actualiza
+                else{
+                    alerta_modal('¡Error!', 'Ocurrió un error al actualizar el estado', 2);
+                }//end else se actualiza
+            })
+            .catch(error => {
+                alerta_modal('¡Error!', 'Ocurrió un error al actualizar el estado', 2);
+            });
+        }//end if se actualiza estatus
+    });
+};//end cambiar_estatus
+
+
+const cambiar_estatus_cita_cancelar = (array, url=null) => {
+    Swal.fire({
+        title: "¿Estás seguro de " + tipo_estatus_cita_cancelar(array[2]) + " " + array[3] + "?",
+        text: "Al "+tipo_estatus_cita_cancelar(array[2])+" "+array[3]+" "+(array[2] === "2" ? 'no ' :'')+array[4],
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: '#7bb13c',
+        cancelButtonColor: '#e84646',
+        confirmButtonText: 'Sí, ' + tipo_estatus_cita_cancelar(array[2]),
+        cancelButtonText: 'Regresar',
+        reverseButtons: true
+    })
+    .then((result) => {
+        if(result.isConfirmed) {
+            let data = new FormData();
+            data.append('id', array[1]);
+            data.append('estatus', obtener_estatus_cita_cancelar(array[2]));
+
+            fetch(array[0], {
+                method: 'POST',
+                body: data
+            })
+            .then(res => {
+                if(!res.ok) {
+                    throw new Error('Ocurrió un error');
+                }//end if
+                return res.json();
+            })
+            .then(respuesta => {
+                if(respuesta.error == 0){
+                    alerta_modal('¡Estado Actualizado!', '¡El estado ha sido actualizado exitosamente!', 1);
+                    window.location = url;
+                }//end if se actualiza
+                else{
+                    alerta_modal('¡Error!', 'Ocurrió un error al actualizar el estado', 2);
+                }//end else se actualiza
+            })
+            .catch(error => {
+                alerta_modal('¡Error!', 'Ocurrió un error al actualizar el estado', 2);
             });
         }//end if se actualiza estatus
     });

@@ -77,5 +77,15 @@ class Tabla_servicios extends Model
         return $opcion;
     } //end existe_nombre_excepto_actual
 
+    public function obtener_servicios()
+    {
 
+        $resultado = $this
+            ->select('id_servicio , nombre_servicio ')
+            ->orderBy('nombre_servicio', 'ASC')
+            ->findAll();
+
+
+        return $resultado;
+    } //end obtener_servicios
 }//End Model servicios

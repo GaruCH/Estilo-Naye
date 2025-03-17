@@ -24,18 +24,26 @@ class Tabla_citas_productos extends Model
 
     public function datatable_citas_productos()
     {
-
         $resultado = $this
-            ->select('citas_productos.id_citas_productos, citas_productos.unidad, productos.nombre_producto, citas.fecha_cita
-            , personas.nombre')
-            ->join('citas','citas_productos.id_cita = citas.id_cita')
-            ->join('productos','citas_productos.id_producto = productos.id_producto')
-            ->join('personas','citas.id_persona = personas.id_persona')
+            ->select('
+            citas_productos.id_citas_productos,
+            citas_productos.unidad,
+            productos.nombre_producto,
+            citas.fecha_cita,
+            personas.nombre,
+            personas.ap_paterno,
+            personas.ap_materno,
+            personas.codigo_persona
+        ')
+            ->join('citas', 'citas_productos.id_cita = citas.id_cita')
+            ->join('personas', 'citas.id_persona = personas.id_persona')
+            ->join('productos', 'citas_productos.id_producto = productos.id_producto', 'left') // Cambio a LEFT JOIN
             ->orderBy('citas.fecha_cita', 'DESC')
             ->findAll();
 
         return $resultado;
-    } //end datatable_usuarios
+    }
+
 
     public function obtener_usuario($id_usuario = 0)
     {

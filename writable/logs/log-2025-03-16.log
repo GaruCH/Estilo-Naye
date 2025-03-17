@@ -1,0 +1,169 @@
+DEBUG - 2025-03-16 21:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 21:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 21:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-16 21:40:09 --> Credenciales incorrectas para el email: superadmin@psico.com
+DEBUG - 2025-03-16 21:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-16 21:40:36 --> Usuario encontrado: Superadmin
+DEBUG - 2025-03-16 21:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-16 21:40:36 --> Redirigiendo a dashboard para el rol SUPERADMIN
+CRITICAL - 2025-03-16 21:47:30 --> ErrorException: Undefined variable $citas
+[Method: GET, Route: administracion_citas]
+in APPPATH\Views\panel\citas.php on line 42.
+ 1 APPPATH\Views\panel\citas.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $citas', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php', 42)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/citas', [], true)
+ 5 APPPATH\Controllers\Panel\Citas.php(88): view('panel/citas', [...])
+ 6 APPPATH\Controllers\Panel\Citas.php(26): App\Controllers\Panel\Citas->crear_vista('panel/citas', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 21:47:42 --> ErrorException: Undefined property: stdClass::$estatus_cita
+[Method: GET, Route: administracion_citas]
+in APPPATH\Views\panel\citas.php on line 60.
+ 1 APPPATH\Views\panel\citas.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estatus_cita', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php', 60)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/citas', [], true)
+ 5 APPPATH\Controllers\Panel\Citas.php(88): view('panel/citas', [...])
+ 6 APPPATH\Controllers\Panel\Citas.php(26): App\Controllers\Panel\Citas->crear_vista('panel/citas', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 21:47:57 --> ErrorException: Undefined property: stdClass::$estatus_cita
+[Method: GET, Route: administracion_citas]
+in APPPATH\Views\panel\citas.php on line 69.
+ 1 APPPATH\Views\panel\citas.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estatus_cita', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php', 69)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/citas', [], true)
+ 5 APPPATH\Controllers\Panel\Citas.php(88): view('panel/citas', [...])
+ 6 APPPATH\Controllers\Panel\Citas.php(26): App\Controllers\Panel\Citas->crear_vista('panel/citas', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 21:48:12 --> ErrorException: Undefined property: stdClass::$estatus_cita
+[Method: GET, Route: administracion_citas]
+in APPPATH\Views\panel\citas.php on line 74.
+ 1 APPPATH\Views\panel\citas.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estatus_cita', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php', 74)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/citas', [], true)
+ 5 APPPATH\Controllers\Panel\Citas.php(88): view('panel/citas', [...])
+ 6 APPPATH\Controllers\Panel\Citas.php(26): App\Controllers\Panel\Citas->crear_vista('panel/citas', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 21:48:30 --> ErrorException: Undefined property: stdClass::$id_persona
+[Method: GET, Route: administracion_citas]
+in APPPATH\Views\panel\citas.php on line 87.
+ 1 APPPATH\Views\panel\citas.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_persona', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php', 87)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/citas', [], true)
+ 5 APPPATH\Controllers\Panel\Citas.php(88): view('panel/citas', [...])
+ 6 APPPATH\Controllers\Panel\Citas.php(26): App\Controllers\Panel\Citas->crear_vista('panel/citas', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 22:14:30 --> ErrorException: Undefined property: stdClass::$estatus_cita
+[Method: GET, Route: administracion_citas]
+in APPPATH\Views\panel\citas.php on line 74.
+ 1 APPPATH\Views\panel\citas.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estatus_cita', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php', 74)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Views\\panel\\citas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('panel/citas', [], true)
+ 5 APPPATH\Controllers\Panel\Citas.php(88): view('panel/citas', [...])
+ 6 APPPATH\Controllers\Panel\Citas.php(26): App\Controllers\Panel\Citas->crear_vista('panel/citas', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 22:59:29 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: confirmar_cita]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Panel\Citas.php(96): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->confirmar_cita()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 22:59:34 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: cancelar_cita]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Panel\Citas.php(115): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas->cancelar_cita()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 23:32:48 --> ErrorException: Undefined array key "href"
+[Method: GET, Route: historial_citas_productos]
+in APPPATH\Helpers\menu_panel_helper.php on line 417.
+ 1 APPPATH\Helpers\menu_panel_helper.php(417): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "href"', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Helpers\\menu_panel_helper.php', 417)
+ 2 APPPATH\Controllers\Panel\Citas_productos.php(87): crear_menu_panel()
+ 3 APPPATH\Controllers\Panel\Citas_productos.php(26): App\Controllers\Panel\Citas_productos->crear_vista('panel/historial_productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas_productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas_productos))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 23:33:16 --> ErrorException: Trying to access array offset on value of type bool
+[Method: GET, Route: historial_citas_productos]
+in APPPATH\Helpers\menu_panel_helper.php on line 417.
+ 1 APPPATH\Helpers\menu_panel_helper.php(417): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Helpers\\menu_panel_helper.php', 417)
+ 2 APPPATH\Controllers\Panel\Citas_productos.php(87): crear_menu_panel()
+ 3 APPPATH\Controllers\Panel\Citas_productos.php(26): App\Controllers\Panel\Citas_productos->crear_vista('panel/historial_productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas_productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas_productos))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')
+CRITICAL - 2025-03-16 23:33:56 --> ErrorException: Undefined array key "href"
+[Method: GET, Route: historial_citas_productos]
+in APPPATH\Helpers\menu_panel_helper.php on line 417.
+ 1 APPPATH\Helpers\menu_panel_helper.php(417): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "href"', 'C:\\xampp\\htdocs\\ESTILO_NAYE\\app\\Helpers\\menu_panel_helper.php', 417)
+ 2 APPPATH\Controllers\Panel\Citas_productos.php(87): crear_menu_panel()
+ 3 APPPATH\Controllers\Panel\Citas_productos.php(26): App\Controllers\Panel\Citas_productos->crear_vista('panel/historial_productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Panel\Citas_productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Citas_productos))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ESTILO_NAYE\\public\\index.php')

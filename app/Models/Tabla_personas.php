@@ -12,6 +12,7 @@ class Tabla_personas extends Model
     protected $allowedFields = [
         'id_persona',
         'id_tipo_persona',
+        'codigo_persona',
         'nombre',
         'ap_paterno',
         'ap_materno',
@@ -112,4 +113,26 @@ class Tabla_personas extends Model
 
         return $opcion;
     } //end existe_email_excepto_actual
+    public function obtener_personas()
+    {
+
+        $resultado = $this
+            ->select('id_persona , nombre, ap_paterno, ap_materno, codigo_persona ')
+            ->orderBy('nombre', 'ASC')
+            ->where('id_tipo_persona', 101)
+            ->findAll();
+
+
+        return $resultado;
+    } //end obtener_personas
+
+    public function obtener_codigo_persona()
+    {
+        $resultado = $this
+            ->select('codigo_persona')
+            ->orderBy('codigo_persona', 'DESC')
+            ->first();
+
+        return $resultado;
+    }
 }//End Model usuarios

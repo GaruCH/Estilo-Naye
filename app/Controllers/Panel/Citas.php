@@ -51,7 +51,7 @@ class Citas extends BaseController
 
 		//Cargar modelos
 		$tabla_Citas = new \App\Models\Tabla_Citas;
-		$datos['Citas'] = $tabla_Citas->datatable_Citas($session->rol_actual['clave']);
+		$datos['citas'] = $tabla_Citas->datatable_Citas($session->rol_actual['clave']);
 
 		//Breadcrumb
 		$navegacion = array(
@@ -88,27 +88,69 @@ class Citas extends BaseController
 		return view($nombre_vista, $contenido);
 	} //end crear_vista
 
-    /*
-	public function estatus_cita()
+	public function confirmar_cita()
 	{
 		if ($this->permitido) {
 			$tabla_Citas = new \App\Models\Tabla_Citas;
-			if ($tabla_Citas->update($this->request->getPost('id'), array('estatus_cita' => $this->request->getPost('estatus')))) {
-				mensaje("Estatus actualizado exitosamente", SUCCESS_ALERT, "¡Estatus actualizado!");
+			$tabla_Citas_Productos = new \App\Models\Tabla_citas_productos;
+
+			$id_cita = $this->request->getPost('id');
+			$nuevo_estado = $this->request->getPost('estatus');
+
+			// Confirmar cita (actualizar el estado)
+			if ($tabla_Citas->update($id_cita, ['estado_cita' => $nuevo_estado])) {
+
+				// Si se confirma la cita, creamos el registro en citas_productos
+				if ($nuevo_estado == 2) {
+					try {
+						// Verificamos que no exista un registro previo para evitar duplicados
+						$registroExistente = $tabla_Citas_Productos->where('id_cita', $id_cita)->first();
+
+						if (!$registroExistente) {
+							$tabla_Citas_Productos->insert([
+								'id_cita'    => $id_cita,
+								'id_producto' => null, // Iniciamos vacío
+								'unidad'     => null  // Iniciamos vacío
+							]);
+						}
+					} catch (\Exception $e) {
+						mensaje("La cita fue confirmada, pero hubo un error al crear el registro de productos", WARNING_ALERT, "¡Registro parcial!");
+						return $this->response->setJSON(['error' => 1]);
+					}
+				}
+
+				mensaje("Estado actualizado exitosamente", SUCCESS_ALERT, "¡Estado actualizado!");
+				return $this->response->setJSON(['error' => 0]);
+			} else {
+				mensaje("Hubo un error al actualizar el estado, intenta nuevamente", DANGER_ALERT, "¡Error al actualizar el estado!");
+				return $this->response->setJSON(['error' => 1]);
+			}
+		} else {
+			mensaje("Hubo un error al actualizar el estado, intenta nuevamente", DANGER_ALERT, "¡Error al actualizar el estado!");
+			return $this->response->setJSON(['error' => 1]);
+		}
+	}
+
+	public function cancelar_cita()
+	{
+		if ($this->permitido) {
+			$tabla_Citas = new \App\Models\Tabla_Citas;
+			if ($tabla_Citas->update($this->request->getPost('id'), array('estado_cita' => $this->request->getPost('estatus')))) {
+				mensaje("Estado actualizado exitosamente", SUCCESS_ALERT, "¡Estado actualizado!");
 				return $this->response->setJSON(['error' => 0]);
 			} //end if se actualiza estatus
 			else {
-				mensaje("Hubo un error al actualizar el estatus, intenta nuevamente", DANGER_ALERT, "¡Error al actualizar el estatus!");
+				mensaje("Hubo un error al actualizar el estado, intenta nuevamente", DANGER_ALERT, "¡Error al actualizar el estado!");
 				return $this->response->setJSON(['error' => 1]);
 			} //end else
 		} //end if es un usuario permitido
 		else {
-			mensaje("Hubo un error al actualizar el estatus, intenta nuevamente", DANGER_ALERT, "¡Error al actualizar el estatus!");
+			mensaje("Hubo un error al actualizar el estado, intenta nuevamente", DANGER_ALERT, "¡Error al actualizar el estado!");
 			return $this->response->setJSON(['error' => 1]);
 		} //end else es un usuario permitido
 	} //end estatus
 
-    */
+
 
 	public function eliminar_cita()
 	{
@@ -140,7 +182,7 @@ class Citas extends BaseController
 				$mensaje['titulo'] = '¡Registro recuperado!';
 
 				$acciones = array();
-				$acciones[] = 'window.location = "./administracion_Citas";';
+				$acciones[] = 'window.location = "./administracion_citas";';
 
 				mensaje("La cita ha sido recuperada exitosamente", SUCCESS_ALERT, "¡cita recuperada!");
 				return $this->response->setJSON(['error' => 0, 'mensaje' => $mensaje, 'actions' => $acciones]);
@@ -159,5 +201,5 @@ class Citas extends BaseController
 			return $this->response->setJSON(['error' => -1, 'mensaje' => array(), 'actions' => array()]);
 		} //end else es un usuario permitido
 	} //end recuperar_usuario
-	
+
 }//End Class Usuarios

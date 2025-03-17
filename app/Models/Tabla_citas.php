@@ -29,37 +29,69 @@ class Tabla_citas extends Model
     {
         if ($rol_actual == ROL_SUPERADMIN['clave']) {
             $resultado = $this
-                ->select('citas.id_cita, citas.fecha_cita, citas.hora_cita, citas.estado_cita, personas.nombre, personas.ap_paterno,
+                ->select('citas.id_cita, citas.fecha_cita, citas.hora_cita, citas.estado_cita, personas.codigo_persona, personas.nombre, personas.ap_paterno,
                 personas.ap_materno, servicios.nombre_servicio, citas.eliminacion')
                 ->join('personas', 'citas.id_persona = personas.id_persona')
                 ->join('servicios', 'citas.id_servicio = servicios.id_servicio')
+                ->where('citas.estado_cita', 1)
                 ->orderBy('citas.fecha_cita', 'DESC')
                 ->withDeleted()
                 ->findAll();
         } //end if el rol actual es superadmin
         else {
             $resultado = $this
-                ->select('citas.id_cita, citas.fecha_cita, citas.hora_cita, citas.estado_cita, personas.nombre, personas.ap_paterno,
+                ->select('citas.id_cita, citas.fecha_cita, citas.hora_cita, citas.estado_cita, personas.codigo_persona, personas.nombre, personas.ap_paterno,
                 personas.ap_materno, servicios.nombre_servicio')
                 ->join('personas', 'citas.id_persona = personas.id_persona')
                 ->join('servicios', 'citas.id_servicio = servicios.id_servicio')
+                ->where('citas.estado_cita', 1)
                 ->orderBy('citas.fecha_cita', 'DESC')
                 ->findAll();
         } //end else el rol actual es superadmin
         return $resultado;
-    } //end datatable_usuarios
+    } //end datatable_citas
 
-    public function obtener_usuario($id_usuario = 0)
+    public function obtener_cita($id_cita = 0)
     {
         $resultado = $this
-            ->select('usuarios.id_usuario, personas.id_persona, personas.nombre, personas.ap_paterno, personas.ap_materno,
-                            personas.sexo, personas.correo, personas.imagen, usuario_roles.id_rol')
-            ->join('personas', 'usuarios.id_persona = personas.id_persona')
-            ->join('usuario_roles', 'usuarios.id_usuario = usuario_roles.id_usuario')
-            ->where('usuarios.id_usuario', $id_usuario)
+            ->select('citas.id_cita, citas.fecha_cita, citas.hora_cita, personas.id_persona, personas.codigo_persona, personas.nombre, personas.ap_paterno,
+                personas.ap_materno, servicios.nombre_servicio, servicios.id_servicio')
+            ->join('personas', 'citas.id_persona = personas.id_persona')
+            ->join('servicios', 'citas.id_servicio = servicios.id_servicio')
+            ->where('citas.id_cita', $id_cita)
             ->first();
         return $resultado;
-    } //end obtener_usuario
+    } //end obtener_cita
 
 
-}//End Model usuarios
+    public function datatable_citas_canceladas()
+    {
+
+        $resultado = $this
+            ->select('citas.id_cita, citas.fecha_cita, citas.hora_cita, citas.estado_cita, personas.codigo_persona, personas.nombre, personas.ap_paterno,
+                personas.ap_materno, servicios.nombre_servicio')
+            ->join('personas', 'citas.id_persona = personas.id_persona')
+            ->join('servicios', 'citas.id_servicio = servicios.id_servicio')
+            ->where('citas.estado_cita', -1)
+            ->orderBy('citas.fecha_cita', 'DESC')
+            ->findAll();
+
+        return $resultado;
+    } //end datatable_citas
+
+    public function datatable_citas_confirmadas()
+    {
+
+        $resultado = $this
+            ->select('citas.id_cita, citas.fecha_cita, citas.hora_cita, citas.estado_cita, personas.codigo_persona, personas.nombre, personas.ap_paterno,
+                personas.ap_materno, servicios.nombre_servicio')
+            ->join('personas', 'citas.id_persona = personas.id_persona')
+            ->join('servicios', 'citas.id_servicio = servicios.id_servicio')
+            ->where('citas.estado_cita', 2)
+            ->orderBy('citas.fecha_cita', 'DESC')
+            ->findAll();
+
+        return $resultado;
+    } //end datatable_citas
+
+}//End Model citas

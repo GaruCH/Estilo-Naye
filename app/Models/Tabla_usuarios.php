@@ -41,7 +41,7 @@ class Tabla_usuarios extends Model
     {
         if ($rol_actual == ROL_SUPERADMIN['clave']) {
             $resultado = $this
-                ->select('usuarios.estatus_usuario, usuarios.id_usuario, personas.nombre, personas.ap_paterno,
+                ->select('usuarios.estatus_usuario, personas.codigo_persona, usuarios.id_usuario, personas.nombre, personas.ap_paterno,
         personas.ap_materno, personas.sexo, personas.correo, personas.imagen, roles.nombre_rol, personas.eliminacion, usuarios.id_persona')
                 ->join('personas', 'usuarios.id_persona = personas.id_persona')
                 ->join('usuario_roles', 'usuarios.id_usuario = usuario_roles.id_usuario')

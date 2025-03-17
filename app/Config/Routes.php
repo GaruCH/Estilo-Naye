@@ -79,8 +79,16 @@ $routes->post('/editar_producto', 'Panel\Producto_detalles::editar', ['as' => 'e
 
 // Citas
 $routes->get('/administracion_citas', 'Panel\Citas::index', ['as' => 'administracion_citas']);
+$routes->get('/historial_citas_confirmadas', 'Panel\Citas_confirmadas::index', ['as' => 'historial_citas_confirmadas']);
+$routes->get('/historial_citas_canceladas', 'Panel\Citas_canceladas::index', ['as' => 'historial_citas_canceladas']);
 $routes->post('/eliminar_cita', 'Panel\Citas::eliminar_cita', ['as' => 'eliminar_cita']);
 $routes->post('/restaurar_cita', 'Panel\Citas::recuperar_cita', ['as' => 'restaurar_cita']);
+$routes->get('/nuevo_cita', 'Panel\Cita_nuevo::index', ['as' => 'nuevo_cita']);
+$routes->post('/registrar_cita', 'Panel\Cita_nuevo::registrar', ['as' => 'registrar_cita']);
+$routes->get('/detalles_cita/(:num)', 'Panel\Cita_detalles::index/$1', ['as' => 'detalles_cita']);
+$routes->post('/editar_cita', 'Panel\Cita_detalles::editar', ['as' => 'editar_cita']);
+$routes->post('/confirmar_cita', 'Panel\Citas::confirmar_cita', ['as' => 'confirmar_cita']);
+$routes->post('/cancelar_cita', 'Panel\Citas::cancelar_cita', ['as' => 'cancelar_cita']);
 
 // Productos_Categoria
 $routes->get('/administracion_productos_categorias', 'Panel\Productos_categorias::index', ['as' => 'administracion_productos_categorias']);

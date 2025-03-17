@@ -103,13 +103,24 @@ class Usuario_nuevo extends BaseController
 			$tabla_personas = new \App\Models\Tabla_personas;
 			$tabla_usuario_roles = new \App\Models\Tabla_usuario_roles;
 
+			$ultimo_codigo = $tabla_personas->obtener_codigo_persona();
+
+			if ($ultimo_codigo) {
+				$numero = (int) substr($ultimo_codigo->codigo_persona, 1) + 1;
+			} else {
+				$numero = 1;
+			}
+			
+			$codigo_persona = 'P' . str_pad($numero, 4, '0', STR_PAD_LEFT);
+
 			$persona = [
 				'nombre' => $this->request->getPost('nombre'),
 				'ap_paterno' => $this->request->getPost('ap_paterno'),
 				'ap_materno' => $this->request->getPost('ap_materno'),
 				'sexo' => $this->request->getPost('sexo'),
 				'correo' => $this->request->getPost('email'),
-				'id_tipo_persona' => 201
+				'id_tipo_persona' => 201,
+				'codigo_persona' => $codigo_persona
 			];
 
 			$usuario = [

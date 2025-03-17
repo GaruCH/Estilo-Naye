@@ -189,7 +189,7 @@ define("TAREA_CATEGORIA_DETALLES", "tarea_categoria_detalles");
 // TAREA ASIGNACION CATEGORIAS
 
 define("TAREA_PRODUCTOS_CATEGORIAS", "tarea_productos_categorias");
-define("TAREA_PRODUCTOS_CATEGORIAS_DETALLES", "tarea_productos_categorias_detalles");
+
 // TAREA PRODUCTOS
 
 define("TAREA_PRODUCTOS", "tarea_productos");
@@ -199,6 +199,8 @@ define("TAREA_PRODUCTO_DETALLES", "tarea_producto_detalles");
 // TAREA CITAS
 
 define("TAREA_CITAS", "tarea_citas");
+define("TAREA_CITAS_CONFIRMADAS", "tarea_citas_confirmadas");
+define("TAREA_CITAS_CANCELADAS", "tarea_citas_canceladas");
 define("TAREA_CITA_NUEVO", "tarea_citas_nuevo");
 define("TAREA_CITA_DETALLES", "tarea_citas_detalles");
 
@@ -229,7 +231,11 @@ define(
         TAREA_SERVICIO_NUEVO,
         TAREA_SERVICIO_DETALLES,
         TAREA_CITAS,
+        TAREA_CITA_NUEVO,
+        TAREA_CITA_DETALLES,
         TAREA_CATEGORIAS,
+        TAREA_CITAS_CONFIRMADAS,
+        TAREA_CITAS_CANCELADAS,
         TAREA_CATEGORIA_NUEVO,
         TAREA_CATEGORIA_DETALLES,
         TAREA_PRODUCTOS,
@@ -237,7 +243,6 @@ define(
         TAREA_PRODUCTO_DETALLES,
         TAREA_CITAS_PRODUCTOS,
         TAREA_PRODUCTOS_CATEGORIAS,
-        TAREA_PRODUCTOS_CATEGORIAS_DETALLES
     )
 );
 

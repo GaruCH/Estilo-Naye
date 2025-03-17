@@ -3,12 +3,12 @@ CREATE TABLE tipo_persona (
     actualizacion TIMESTAMP NULL DEFAULT NULL,
     eliminacion DATETIME DEFAULT NULL,
     id_tipo_persona INT(11) NOT NULL PRIMARY KEY,
-    nombre_tipo VARCHAR(50) NOT NULL UNIQUE COMMENT 'Ejemplo: Cliente, Proveedor, Empleado',
+    nombre_tipo VARCHAR(50) NOT NULL UNIQUE COMMENT 'Ejemplo: persona, Proveedor, Empleado',
     estatus_tipo_persona TINYINT(1) NOT NULL DEFAULT 2
 ) ENGINE=InnoDB;
 
 -- Tipos personas 
--- -- 101 : Cliente
+-- -- 101 : persona
 -- -- 201 : Empleado
 
 INSERT INTO tipo_persona (creacion, actualizacion, estatus_tipo_persona, id_tipo_persona, nombre_tipo) VALUES
@@ -21,6 +21,7 @@ CREATE TABLE personas (
     eliminacion DATETIME DEFAULT NULL,
     id_persona INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_tipo_persona INT(11) NOT NULL,
+    codigo_persona VARCHAR(10) UNIQUE NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     ap_paterno VARCHAR(50) NOT NULL,
     ap_materno VARCHAR(50) NULL DEFAULT NULL,
@@ -32,10 +33,19 @@ CREATE TABLE personas (
     INDEX (id_tipo_persona)
 ) ENGINE=InnoDB;
 
-INSERT INTO personas (creacion, actualizacion, nombre, ap_paterno, ap_materno, sexo, correo, id_tipo_persona) VALUES
-    (current_timestamp(), current_timestamp(),  'Superadmin', 'Paterno', 'Materno', 2, 'superadmin@esnaye.com', 201),
-    (current_timestamp(), current_timestamp(),  'Admin', 'Paterno', 'Materno', 2,'admin@esnaye.com', 201),
-    (current_timestamp(), current_timestamp(),  'Trabajador', 'Paterno', 'Materno', 2,'trabajador@esnaye.com', 201);
+INSERT INTO personas (creacion, actualizacion, codigo_persona, nombre, ap_paterno, ap_materno, sexo, correo, id_tipo_persona) VALUES
+    (current_timestamp(), current_timestamp(), 'C0001', 'Superadmin', 'Paterno', 'Materno', 2, 'superadmin@esnaye.com', 201),
+    (current_timestamp(), current_timestamp(), 'C0002', 'Admin', 'Paterno', 'Materno', 2, 'admin@esnaye.com', 201),
+    (current_timestamp(), current_timestamp(), 'C0003', 'Trabajador', 'Paterno', 'Materno', 2, 'trabajador@esnaye.com', 201);
+
+INSERT INTO personas (creacion, actualizacion, codigo_persona, id_tipo_persona, nombre, ap_paterno, ap_materno, telefono, sexo, correo, imagen) VALUES
+    (current_timestamp(), current_timestamp(), 'C0004', 101, 'Juan', 'Pérez', 'Gómez', '5551234567', 1, 'juan.perez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'C0005', 101, 'María', 'López', 'Ramírez', '5557654321', 0, 'maria.lopez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'C0006', 101, 'Carlos', 'Martínez', NULL, '5559876543', 1, 'carlos.martinez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'C0007', 101, 'Ana', 'Hernández', 'Torres', '5553456789', 0, 'ana.hernandez@example.com', NULL),
+    (current_timestamp(), current_timestamp(), 'C0008', 101, 'Luis', 'García', 'Díaz', '5556781234', 1, 'luis.garcia@example.com', NULL);
+
+
 
 
 CREATE TABLE roles (
@@ -140,7 +150,7 @@ CREATE TABLE citas (
     id_servicio INT(11) NOT NULL,
     fecha_cita DATE NOT NULL,
     hora_cita TIME NOT NULL,
-    estado_cita VARCHAR(20) NOT NULL,
+    estado_cita TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1 -> pendiente, 2 -> confirmada, -1 -> cancelada',
     FOREIGN KEY (id_persona) REFERENCES personas(id_persona) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_servicio) REFERENCES servicios(id_servicio) ON DELETE CASCADE ON UPDATE CASCADE,
     INDEX (id_persona),
@@ -195,15 +205,15 @@ INSERT INTO producto_categoria (id_producto, id_categoria) VALUES
 (10, 7); -- Solución para Uñas Engrosadas → Cuidado de Uñas
 
 
-
 -- Tabla de relación entre citas y productos utilizados en ellas
 CREATE TABLE citas_productos (
     id_citas_productos INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_cita INT(11) NOT NULL,
-    id_producto INT(11) NOT NULL,
-    unidad INT(3) NOT NULL,
+    id_producto INT(11) DEFAULT NULL, -- Permitir valores NULL
+    unidad INT(3) DEFAULT NULL, -- Permitir valores NULL
     FOREIGN KEY (id_cita) REFERENCES citas(id_cita) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto) ON DELETE CASCADE ON UPDATE CASCADE,
     INDEX (id_cita),
     INDEX (id_producto)
 ) ENGINE=InnoDB;
+
