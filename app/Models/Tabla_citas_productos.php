@@ -25,19 +25,19 @@ class Tabla_citas_productos extends Model
     public function datatable_citas_productos()
     {
         $resultado = $this
-            ->select('
-            citas_productos.id_citas_productos,
-            citas_productos.unidad,
-            productos.nombre_producto,
-            citas.fecha_cita,
-            personas.nombre,
-            personas.ap_paterno,
-            personas.ap_materno,
-            personas.codigo_persona
-        ')
+            ->select([
+                'citas.id_cita',
+                'citas_productos.id_citas_productos',
+                'personas.codigo_persona',
+                'CONCAT(personas.nombre, " ", personas.ap_paterno, " ", personas.ap_materno) AS paciente',
+                'GROUP_CONCAT(productos.nombre_producto ORDER BY productos.nombre_producto SEPARATOR ", ") AS productos',
+                'GROUP_CONCAT(citas_productos.unidad ORDER BY productos.nombre_producto SEPARATOR ", ") AS cantidades',
+                'citas.fecha_cita'
+            ])
             ->join('citas', 'citas_productos.id_cita = citas.id_cita')
             ->join('personas', 'citas.id_persona = personas.id_persona')
-            ->join('productos', 'citas_productos.id_producto = productos.id_producto', 'left') // Cambio a LEFT JOIN
+            ->join('productos', 'citas_productos.id_producto = productos.id_producto', 'left')
+            ->groupBy('citas.id_cita, personas.codigo_persona, paciente, citas.fecha_cita')
             ->orderBy('citas.fecha_cita', 'DESC')
             ->findAll();
 
@@ -45,17 +45,34 @@ class Tabla_citas_productos extends Model
     }
 
 
-    public function obtener_usuario($id_usuario = 0)
+    public function obtener_cita_producto($id_cita = 0)
     {
         $resultado = $this
-            ->select('usuarios.id_usuario, personas.id_persona, personas.nombre, personas.ap_paterno, personas.ap_materno,
-                            personas.sexo, personas.correo, personas.imagen, usuario_roles.id_rol')
-            ->join('personas', 'usuarios.id_persona = personas.id_persona')
-            ->join('usuario_roles', 'usuarios.id_usuario = usuario_roles.id_usuario')
-            ->where('usuarios.id_usuario', $id_usuario)
-            ->first();
+            ->select('
+        citas.id_cita,
+        citas.fecha_cita,
+        personas.nombre,
+        personas.ap_paterno,
+        personas.ap_materno,
+        personas.codigo_persona')
+            ->join('citas', 'citas.id_cita = citas.id_cita')
+            ->join('personas', 'citas.id_persona = personas.id_persona')
+            ->where('citas.id_cita', $id_cita)
+            ->first(); // Solo un resultado, ya que estamos buscando una cita específica
         return $resultado;
-    } //end obtener_usuario
+    }
 
+    public function obtener_productos_cita($id_cita)
+{
+    $resultado = $this
+        ->select('citas_productos.id_citas_productos,
+                 citas_productos.unidad,
+                 productos.nombre_producto,
+                 citas_productos.id_producto')
+        ->join('productos', 'citas_productos.id_producto = productos.id_producto', 'left')
+        ->where('citas_productos.id_cita', $id_cita) 
+        ->findAll();  // Obtener todos los productos asociados con la cita
+    return $resultado;
+}
 
-}//End Model usuarios
+}//End Model cita_productos

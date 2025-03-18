@@ -79,4 +79,16 @@ class Tabla_productos extends Model
         return $opcion;
     } //end existe_nombre_excepto_actual
 
+    public function obtener_productos()
+    {
+
+        $resultado = $this
+            ->select('id_producto, nombre_producto, descripcion_producto, cantidad_producto, stock_minimo_producto')
+            ->orderBy('nombre_producto', 'ASC')
+            ->findAll();
+
+       
+        return $resultado;
+    } //end obtener_productos
+
 }//End Model productos

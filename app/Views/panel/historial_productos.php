@@ -36,41 +36,25 @@
                         <tbody>
                             <?php
                             $num = 0;
-                            foreach ($citas_productos as $citas_producto) {
+                            foreach ($citas_productos as $cita) {
                                 echo '<tr>';
-                                echo '<td class="special-cell text-center">' .
-                                    ++$num .
-                                    '</td>';
-                                echo '<td class="special-cell text-center">' .
-                                    $citas_producto->codigo_persona .
-                                    '</td>';
-                                echo '<td class="special-cell text-center">' .
-                                    $citas_producto->nombre . ' ' . $citas_producto->ap_paterno . ' ' . $citas_producto->ap_materno .
-                                    '</td>';
-                                echo '<td class="special-cell text-center">' .
-                                    $citas_producto->nombre_producto .
-                                    '</td>';
-                                echo '<td class="special-cell text-center">' .
-                                    $citas_producto->unidad .
-                                    '</td>';
-                                echo '<td class="special-cell text-center">' .
-                                    $citas_producto->fecha_cita .
-                                    '</td>';
+                                echo '<td class="special-cell text-center">' . ++$num . '</td>';
+                                echo '<td class="special-cell text-center">' . $cita->codigo_persona . '</td>';
+                                echo '<td class="special-cell text-center">' . $cita->paciente . '</td>';
+                                echo '<td class="special-cell text-center">' . $cita->productos . '</td>';
+                                echo '<td class="special-cell text-center">' . $cita->cantidades . '</td>';
+                                echo '<td class="special-cell text-center">' . $cita->fecha_cita . '</td>';
                                 echo '<td class="special-cell text-center" nowrap="nowrap">';
-
-
-
-                                echo '&nbsp;&nbsp;&nbsp;';
-                                echo '<a type="button" href="' . route_to('detalles_citas_producto', $citas_producto->id_citas_productos) . '" class="btn btn-warning btn-circle" id="' . $citas_producto->id_citas_productos . '" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar al citas_producto">
-                                                    <i data-feather="edit-3" class="feather fill-white"></i>
-                                              </a>';
+                                echo '<a type="button" href="' . route_to('detalles_citas_producto', $cita->id_cita) . '" class="btn btn-warning btn-circle">
+                                <i data-feather="edit-3" class="feather fill-white"></i>
+                              </a>';
 
                                 echo '</td>';
                                 echo '</tr>';
-                            } //end foreach citas_productos
-
+                            }
                             ?>
                         </tbody>
+
                     </table>
                 </div>
             </div>

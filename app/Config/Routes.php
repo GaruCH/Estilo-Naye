@@ -95,6 +95,8 @@ $routes->get('/administracion_productos_categorias', 'Panel\Productos_categorias
 //$routes->get('/detalles_producto/(:num)/(:num)', 'Panel\Producto_detalles::index/$1/$2', ['as' => 'detalles_producto']);
 // Historial Productos
 $routes->get('/historial_citas_productos', 'Panel\Citas_productos::index', ['as' => 'historial_citas_productos']);
+$routes->get('/detalles_citas_producto/(:num)', 'Panel\Cita_producto_detalles::index/$1', ['as' => 'detalles_citas_producto']);
+$routes->post('/editar_citas_producto', 'Panel\Cita_producto_detalles::editar', ['as' => 'editar_citas_producto']);
 
 //ejemplo
 $routes->get('/ejemplo', 'Panel\Ejemplo::index', ['as' => 'ejemplo']);
