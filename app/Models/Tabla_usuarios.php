@@ -25,7 +25,7 @@ class Tabla_usuarios extends Model
     public function login($email = NULL, $password = NULL)
     {
         $resultado = $this
-            ->select('usuarios.estatus_usuario, usuarios.id_usuario, personas.nombre, personas.ap_paterno,
+            ->select('usuarios.estatus_usuario, usuarios.id_usuario, personas.id_persona, personas.nombre, personas.ap_paterno,
         personas.ap_materno, personas.sexo, personas.correo, personas.imagen,
         usuario_roles.id_rol AS clave_rol, roles.nombre_rol')
             ->join('personas', 'usuarios.id_persona = personas.id_persona')
@@ -53,7 +53,7 @@ class Tabla_usuarios extends Model
         } //end if el rol actual es superadmin
         else {
             $resultado = $this
-                ->select('usuarios.estatus_usuario, usuarios.id_usuario, personas.nombre, personas.ap_paterno,
+                ->select('usuarios.estatus_usuario, usuarios.id_usuario, personas.codigo_persona, personas.nombre, personas.ap_paterno,
         personas.ap_materno, personas.sexo, personas.correo, personas.imagen, roles.nombre_rol, usuarios.id_persona')
                 ->join('personas', 'usuarios.id_persona = personas.id_persona')
                 ->join('usuario_roles', 'usuarios.id_usuario = usuario_roles.id_usuario')

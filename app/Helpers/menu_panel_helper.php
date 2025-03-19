@@ -235,6 +235,109 @@ function configurar_menu_lateral_panel($rol_actual = NULL)
 
     } //end ROL_SUPERADMIN ROL_ADMIN
 
+    if ($rol_actual == ROL_TRABAJADOR['clave']) {
+        //Sección Dashboard
+        $menu_item['is_active'] = false;
+        $menu_item['href'] = route_to('dashboard_superadmin');
+        $menu_item['icon'] = 'fas fa-home';
+        $menu_item['text'] = ' Dashboard';
+        $menu_item['submenu'] = array();
+        $menu['dashboard'] = $menu_item;
+
+        //Sección Servicios
+        $menu_item = array();
+        $menu_item['is_active'] = false;
+        $menu_item['href'] = route_to('administracion_servicios');
+        $menu_item['icon'] = 'fa fa-book';
+        $menu_item['text'] = ' Servicios';
+        $menu_item['submenu'] = array();
+        $menu['servicios'] = $menu_item;
+
+        //Sección Categorías
+        $menu_item = array();
+        $menu_item['is_active'] = false;
+        $menu_item['href'] = route_to('administracion_categorias');
+        $menu_item['icon'] = 'fa fa-tags';
+        $menu_item['text'] = ' Categorías';
+        $menu_item['submenu'] = array();
+        $menu['categorias'] = $menu_item;
+
+        // Sección Productos
+        $menu_item = array();
+        $menu_item['is_active'] = FALSE;
+        $menu_item['href'] = '#';
+        $menu_item['icon'] = 'fa fa-cubes';
+        $menu_item['text'] = 'Productos';
+        $menu_item['submenu'] = array();
+
+        // Submenú - Administración de Productos
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('administracion_productos');
+        $sub_menu_item['icon'] = 'fa fa-cogs';
+        $sub_menu_item['text'] = 'Administración';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        // Submenú - Historial de Productos
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('historial_citas_productos');
+        $sub_menu_item['icon'] = 'fa fa-search-minus';
+        $sub_menu_item['text'] = 'Historial Productos';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('administracion_productos_categorias');
+        $sub_menu_item['icon'] = 'fa fa-search-minus';
+        $sub_menu_item['text'] = 'Asignación categorías';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        $menu['productos'] = $menu_item; // Guardar en el menú principal
+
+        // Sección Citas
+        $menu_item = array();
+        $menu_item['is_active'] = FALSE;
+        $menu_item['href'] = '#';
+        $menu_item['icon'] = 'fa fa-address-book';
+        $menu_item['text'] = 'Citas';
+        $menu_item['submenu'] = array();
+
+        // Submenú - Administración de Citas
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('administracion_citas');
+        $sub_menu_item['icon'] = 'fa fa-cogs';
+        $sub_menu_item['text'] = 'Administración';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        // Submenú - Historial de Productos
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('historial_citas_confirmadas');
+        $sub_menu_item['icon'] = 'fa fa-search-minus';
+        $sub_menu_item['text'] = 'Citas confirmadas';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        $sub_menu_item = array();
+        $sub_menu_item['is_active'] = FALSE;
+        $sub_menu_item['href'] = route_to('historial_citas_canceladas');
+        $sub_menu_item['icon'] = 'fa fa-search-minus';
+        $sub_menu_item['text'] = 'Citas canceladas';
+        $menu_item['submenu'][] = $sub_menu_item;
+
+        $menu['citas'] = $menu_item; // Guardar en el menú principal
+    }
+
+    if ($rol_actual == ROL_PACIENTE['clave']) {
+                //Sección Dashboard
+        $menu_item['is_active'] = false;
+        $menu_item['href'] = route_to('reservar_cita');
+        $menu_item['icon'] = 'fa fa-address-book';
+        $menu_item['text'] = ' Reservación';
+        $menu_item['submenu'] = array();
+        $menu['reservacion'] = $menu_item;
+    }
 
     /*menu con submenu de ejemplo*/
     // $menu_item = array();
@@ -344,6 +447,63 @@ function activar_menu_item_panel($menu = NULL, $tarea_actual = NULL)
         } //end switch tarea actual
     } //end if ROL_OFICIAL
 
+    if ($rol_actual == ROL_TRABAJADOR['clave']) {
+        switch ($tarea_actual) {
+            //SECCIÓN DASHBOARD
+            case TAREA_SUPERADMIN_DASHBOARD:
+                $menu['dashboard']['is_active'] = TRUE;
+                break;
+
+            //SECCIÓN SERVICIOS
+            case TAREA_SERVICIOS:
+            case TAREA_SERVICIO_NUEVO:
+            case TAREA_SERVICIO_DETALLES:
+                $menu['servicios']['is_active'] = TRUE;
+                break;
+            //SECCIÓN CATEGORIAS
+            case TAREA_CATEGORIAS:
+            case TAREA_CATEGORIA_NUEVO:
+            case TAREA_CATEGORIA_DETALLES:
+                $menu['categorias']['is_active'] = TRUE;
+                break;
+
+            //SECCIÓN PRODUCTOS
+            case TAREA_PRODUCTOS:
+            case TAREA_PRODUCTO_NUEVO:
+            case TAREA_PRODUCTO_DETALLES:
+            case TAREA_PRODUCTOS_CATEGORIAS:
+            case TAREA_CITAS_PRODUCTOS:
+                $menu['productos']['is_active'] = TRUE;
+                break;
+
+
+            //SECCIÓN CITAS
+            case TAREA_CITAS:
+            case TAREA_CITA_NUEVO:
+            case TAREA_CITA_DETALLES:
+            case TAREA_CITAS_CANCELADAS:
+            case TAREA_CITAS_CONFIRMADAS:
+                $menu['citas']['is_active'] = TRUE;
+                break;
+            case TAREA_EJEMPLO:
+                $menu['ejemplo']['is_active'] = TRUE;
+                break;
+            default:
+                break;
+        } //end switch tarea actual
+    }
+
+    if ($rol_actual == ROL_PACIENTE['clave']) {
+        switch ($tarea_actual) {
+            //SECCIÓN RESERVAR CITA
+            case  TAREA_PACIENTE_RESERVAR_CITA:
+                $menu['reservacion']['is_active'] = TRUE;
+                break;
+
+            default:
+                break;
+        } //end switch tarea actualF
+    }
 
     /*
         Example to active the option menu

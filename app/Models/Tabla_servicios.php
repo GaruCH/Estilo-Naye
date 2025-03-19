@@ -37,7 +37,6 @@ class Tabla_servicios extends Model
             $resultado = $this
                 ->select('id_servicio, nombre_servicio, descripcion_servicio, precio_servicio, estatus_servicio')
                 ->orderBy('nombre_servicio', 'ASC')
-                ->withDeleted()
                 ->findAll();
         } //end else el rol actual es superadmin
         return $resultado;

@@ -18,6 +18,10 @@ class Permisos {
             case ROL_TRABAJADOR['clave']:
                 $permiso = in_array($clave_tarea, PERMISOS_TRABAJADOR);
             break;
+
+            case ROL_PACIENTE['clave']:
+                $permiso = in_array($clave_tarea, PERMISOS_PACIENTE);
+            break;
             
             default:
                 $permiso = FALSE;

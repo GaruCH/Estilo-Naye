@@ -38,7 +38,6 @@ class Tabla_productos extends Model
             $resultado = $this
             ->select('id_producto, nombre_producto, descripcion_producto, estatus_producto, cantidad_producto, stock_minimo_producto')
             ->orderBy('nombre_producto', 'ASC')
-            ->withDeleted()
             ->findAll();
         } //end else el rol actual es superadmin
         return $resultado;

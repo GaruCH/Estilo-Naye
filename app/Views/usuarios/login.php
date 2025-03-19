@@ -82,11 +82,19 @@
 
                     <div class="flex flex-wrap items-center justify-end gap-4 mt-6">
                         <div>
-                            <a href="javascript:void(0);" class="text-letra font-semibold text-lg hover:underline">
+                            <a href="<?= route_to('usuario_forgot_password') ?>"
+                                class="text-letra font-semibold text-lg hover:underline">
                                 ¿Olvidaste tu contraseña?
                             </a>
                         </div>
+                        <div>
+                            <a href="<?= route_to('usuario_register') ?>"
+                                class="text-letra font-semibold text-lg hover:underline">
+                                Regístrate aquí si eres un paciente
+                            </a>
+                        </div>
                     </div>
+
 
                     <div class="form-group text-center mt-4 mb-3">
                         <button class="w-full shadow-xl py-2.5 px-4 text-lg tracking-wide rounded-md text-white bg-letra hover:bg-hover focus:outline-none" type="submit">

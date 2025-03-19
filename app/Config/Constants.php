@@ -144,13 +144,15 @@ define("RECURSOS_JS", "resource/js");
 define("ROL_SUPERADMIN",  array('nombre' => 'Superadmin',           'clave' => '901'));
 define("ROL_ADMIN",       array('nombre' => 'Admininistrador',      'clave' => '801'));
 define("ROL_TRABAJADOR",   array('nombre' => 'Trabajador',            'clave' => '701'));
+define("ROL_PACIENTE",   array('nombre' => 'Paciente',            'clave' => '601'));
 
 define(
     "ROLES",
     array(
         ROL_SUPERADMIN["clave"] => ROL_SUPERADMIN["nombre"],
         ROL_ADMIN["clave"] => ROL_ADMIN["nombre"],
-        ROL_TRABAJADOR["clave"] => ROL_TRABAJADOR["nombre"]
+        ROL_TRABAJADOR["clave"] => ROL_TRABAJADOR["nombre"],
+        ROL_PACIENTE["clave"] => ROL_PACIENTE["nombre"]
     )
 );
 
@@ -213,6 +215,8 @@ define("TAREA_CITA_PRODUCTO_DETALLES", "tarea_cita_producto_detalles");
 // TAREA DASHBOARD
 define("TAREA_TRABAJADOR_DASHBOARD", "tarea_trabajador_dashboard");
 
+// TAREA RESERVAR CITA
+define("TAREA_PACIENTE_RESERVAR_CITA", "tarea_paciente_rerservar_cita");
 //******************************************************************************
 //***************************** PERMISOS DE LOS ROLES **************************
 //******************************************************************************
@@ -251,19 +255,63 @@ define(
 define(
     "PERMISOS_ADMIN",
     array(
-        TAREA_ADMIN_DASHBOARD,
+        TAREA_SUPERADMIN_DASHBOARD,
         TAREA_PERFIL,
         TAREA_PASSWORD,
         TAREA_USUARIOS,
         TAREA_USUARIO_NUEVO,
         TAREA_USUARIO_DETALLES,
-        TAREA_EJEMPLO
-
+        TAREA_EJEMPLO,
+        TAREA_SERVICIOS,
+        TAREA_SERVICIO_NUEVO,
+        TAREA_SERVICIO_DETALLES,
+        TAREA_CITAS,
+        TAREA_CITA_NUEVO,
+        TAREA_CITA_DETALLES,
+        TAREA_CATEGORIAS,
+        TAREA_CITAS_CONFIRMADAS,
+        TAREA_CITAS_CANCELADAS,
+        TAREA_CATEGORIA_NUEVO,
+        TAREA_CATEGORIA_DETALLES,
+        TAREA_PRODUCTOS,
+        TAREA_PRODUCTO_NUEVO,
+        TAREA_PRODUCTO_DETALLES,
+        TAREA_CITAS_PRODUCTOS,
+        TAREA_CITA_PRODUCTO_DETALLES,
+        TAREA_PRODUCTOS_CATEGORIAS,
     )
 );
 
 define(
     "PERMISOS_TRABAJADOR",
-    array(TAREA_TRABAJADOR_DASHBOARD,
+    array(
+        TAREA_SUPERADMIN_DASHBOARD,
+        TAREA_PERFIL,
+        TAREA_PASSWORD,
+        TAREA_SERVICIOS,
+        TAREA_SERVICIO_NUEVO,
+        TAREA_SERVICIO_DETALLES,
+        TAREA_CITAS,
+        TAREA_CITA_NUEVO,
+        TAREA_CITA_DETALLES,
+        TAREA_CATEGORIAS,
+        TAREA_CITAS_CONFIRMADAS,
+        TAREA_CITAS_CANCELADAS,
+        TAREA_CATEGORIA_NUEVO,
+        TAREA_CATEGORIA_DETALLES,
+        TAREA_PRODUCTOS,
+        TAREA_PRODUCTO_NUEVO,
+        TAREA_PRODUCTO_DETALLES,
+        TAREA_CITAS_PRODUCTOS,
+        TAREA_CITA_PRODUCTO_DETALLES,
+        TAREA_PRODUCTOS_CATEGORIAS,
+    )
+);
+
+define(
+    "PERMISOS_PACIENTE",
+    array(
+        TAREA_PACIENTE_RESERVAR_CITA,
+        TAREA_PERFIL,
     )
 );

@@ -36,7 +36,6 @@ class Tabla_categorias extends Model
             $resultado = $this
                 ->select('id_categoria, nombre_categoria, descripcion_categoria, estatus_categoria')
                 ->orderBy('nombre_categoria', 'ASC')
-                ->withDeleted()
                 ->findAll();
         } //end else el rol actual es superadmin
         return $resultado;

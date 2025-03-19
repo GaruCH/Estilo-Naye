@@ -61,11 +61,13 @@ CREATE TABLE roles (
 -- -- 901 : SUPERADMIN
 -- -- 801 : ADMIN
 -- -- 701 : TRABAJADOR
+-- -- 601 : CLIENTE
 
 INSERT INTO roles (creacion, actualizacion, estatus_rol, id_rol, nombre_rol) VALUES
     (current_timestamp(), current_timestamp(), '2', 901, 'Superadmin'),
     (current_timestamp(), current_timestamp(), '2', 801, 'Administrador'),
-    (current_timestamp(), current_timestamp(), '2', 701, 'Trabajador');
+    (current_timestamp(), current_timestamp(), '2', 701, 'Trabajador'),
+    (current_timestamp(), current_timestamp(), '2', 601, 'Paciente');
 
 CREATE TABLE usuarios (
     id_usuario INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,

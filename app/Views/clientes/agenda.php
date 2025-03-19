@@ -24,19 +24,19 @@
                             <div class="grid gap-4 md:grid-cols-2">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-900">Nombre</label>
-                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="John" required>
+                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="John" disabled>
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-900">Apellido Paterno</label>
-                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="Doe" required>
+                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="Doe" disabled>
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-900">Apellido Materno</label>
-                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="Smith" required>
+                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="Smith" disabled>
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-900">Teléfono</label>
-                                    <input type="tel" class="w-full p-2 border rounded-md" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                    <input type="tel" class="w-full p-2 border rounded-md" placeholder="123-456-7890" disabled>
                                 </div>
                             </div>
                         </fieldset>
@@ -47,11 +47,11 @@
                             <div class="grid gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-900">Fecha y Hora</label>
-                                    <input type="datetime-local" class="w-full p-2 border rounded-md" required>
+                                    <input type="datetime-local" class="w-full p-2 border rounded-md" disabled>
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-900">Tipo de Servicio</label>
-                                    <select class="w-full p-2 border rounded-md" required>
+                                    <select class="w-full p-2 border rounded-md" disabled>
                                         <option value="">Selecciona un servicio</option>
                                         <option value="Afecciones de los pies">Afecciones de los pies</option>
                                         <option value="Callosidades">Callosidades</option>
@@ -67,14 +67,25 @@
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-900">Comentarios (Opcional)</label>
-                                    <textarea class="w-full p-2 border rounded-md" placeholder="Ej. Color o diseño deseado"></textarea>
+                                    <textarea class="w-full p-2 border rounded-md" placeholder="Ej. Color o diseño deseado" disabled></textarea>
                                 </div>
                             </div>
                         </fieldset>
 
+                        <!-- 🔔 Mensaje de advertencia -->
+                        <div class="mb-4 p-3 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 rounded-md">
+                            <strong>¡Importante!</strong> Para poder agendar una cita, primero debes iniciar sesión o registrarte.
+                        </div>
+
                         <!-- Botón de Enviar -->
-                        <button type="submit" class="w-full bg-letra text-white p-2 rounded-md hover:bg-hover">Reservar Cita</button>
+                        <button
+                            type="button"
+                            class="w-full bg-letra text-white p-2 rounded-md hover:bg-hover"
+                            onclick="window.location.href='<?= route_to('usuario_login') ?>'">
+                            Registrarse
+                        </button>
                     </form>
+
                 </div>
 
                 <!-- Imagen del Servicio -->

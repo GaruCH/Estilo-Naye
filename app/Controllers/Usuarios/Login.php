@@ -18,13 +18,17 @@ class Login extends BaseController
             switch ($rol_actual) {
                 case ROL_SUPERADMIN['clave']:
                     $session->set("tarea_actual", TAREA_SUPERADMIN_DASHBOARD);
-                    return redirect()->to( route_to('dashboard_superadmin'));
+                    return redirect()->to(route_to('dashboard_superadmin'));
                 case ROL_ADMIN['clave']:
-                    $session->set("tarea_actual", TAREA_ADMIN_DASHBOARD);
-                    return redirect()->to(route_to('dashboard_admin'));
+                    $session->set("tarea_actual", TAREA_SUPERADMIN_DASHBOARD);
+                    return redirect()->to(route_to('dashboard_superadmin'));
                 case ROL_TRABAJADOR['clave']:
-                    $session->set("tarea_actual", TAREA_TRABAJADOR_DASHBOARD);
-                    return redirect()->to(route_to('dashboard_trabajador'));
+                    $session->set("tarea_actual", TAREA_SUPERADMIN_DASHBOARD);
+                    return redirect()->to(route_to('dashboard_superadmin'));
+                case ROL_PACIENTE['clave']:
+                    $session->set("tarea_actual", TAREA_PACIENTE_RESERVAR_CITA);
+                    log_message('info', 'Redirigiendo a dashboard');
+                    return redirect()->to(route_to('reservar_cita'));
                 default:
                     return redirect()->to(route_to('usuario_login'))->with('error', 'Acceso no autorizado');
             }
@@ -32,7 +36,6 @@ class Login extends BaseController
             // Si no hay rol definido, mostrar la vista de login
             return $this->crear_vista("usuarios/login");
         }
-
     }
 
     private function crear_vista($nombre_vista)
@@ -63,6 +66,7 @@ class Login extends BaseController
             $session = session();
             $session->set("sesion_iniciada", TRUE);
             $session->set("id_usuario", $usuario->id_usuario);
+            $session->set("id_persona", $usuario->id_persona);
             $session->set("nombre_usuario", $usuario->nombre);
             $session->set("nombre_completo_usuario", $usuario->nombre . ' ' . $usuario->ap_paterno . ' ' . $usuario->ap_materno);
             $session->set("sexo_usuario", $usuario->sexo);
@@ -79,11 +83,15 @@ class Login extends BaseController
                 case ROL_ADMIN['clave']:
                     $session->set("tarea_actual", TAREA_ADMIN_DASHBOARD);
                     log_message('info', 'Redirigiendo a dashboard para el rol ADMIN');
-                    return redirect()->to(route_to('dashboard_admin'));
+                    return redirect()->to(route_to('dashboard_superadmin'));
                 case ROL_TRABAJADOR['clave']:
                     $session->set("tarea_actual", TAREA_TRABAJADOR_DASHBOARD);
-                    log_message('info', 'Redirigiendo a dashboard_psicologo para el rol PSICOLOGO');
-                    return redirect()->to(route_to('dashboard_trabajador'));
+                    log_message('info', 'Redirigiendo a dashboard para el rol PSICOLOGO');
+                    return redirect()->to(route_to('dashboard_superadmin'));
+                case ROL_PACIENTE['clave']:
+                    $session->set("tarea_actual", TAREA_PACIENTE_RESERVAR_CITA);
+                    log_message('info', 'Redirigiendo a dashboard para el rol PSICOLOGO');
+                    return redirect()->to(route_to('reservar_cita'));
                 default:
                     log_message('info', 'Redirigiendo al login');
                     return redirect()->to(route_to('usuario_login'));
