@@ -67,7 +67,7 @@
                         <label class="form-control-label">Paciente: (<font color="red">*</font>)</label>
                         <div class="form-floating mb-3">
                             <select class="form-control" id="id_persona" name="id_persona">
-                                <option value="">-- Seleccionar persona --</option>
+                                <option value="">-- Seleccionar paciente --</option>
                                 <?php foreach ($personas as $persona) : ?>
                                     <option value="<?= $persona->id_persona ?>" <?= ($persona->id_persona == $cita->id_persona) ? 'selected' : '' ?>>
                                     <?= $persona->codigo_persona?>  <?= $persona->nombre ?> <?= $persona->ap_paterno ?> <?= $persona->ap_materno ?>

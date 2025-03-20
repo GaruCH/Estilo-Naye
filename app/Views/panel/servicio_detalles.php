@@ -45,8 +45,8 @@
                             <?php
                             $parametros = array(
                                 'class' => 'form-control',
-                                'id' => 'descripcion',
-                                'name' => 'descripcion',
+                                'id' => 'descripcion_servicio',
+                                'name' => 'descripcion_servicio',
                                 'placeholder' => 'Descripción del servicio',
                                 'value' => $servicio->descripcion_servicio
                             );

@@ -45,8 +45,8 @@
                             <?php
                             $parametros = array(
                                 'class' => 'form-control',
-                                'id' => 'descripcion',
-                                'name' => 'descripcion',
+                                'id' => 'descripcion_categoria',
+                                'name' => 'descripcion_categoria',
                                 'placeholder' => 'Descripción del categoria',
                                 'value' => $categoria->descripcion_categoria
                             );

@@ -70,24 +70,52 @@
                 </div>
 
                 <!-- Lista dinámica de productos -->
-                <div id="productos-lista">
-                    <?php
-                    if (!empty($productos_cita)) {
-                        foreach ($productos_cita as $producto) {
-                    ?>
+                <div>
+                    <div id="productos-lista">
+                        <?php
+                        if (!empty($productos_cita)) {
+                            foreach ($productos_cita as $producto) {
+                        ?>
+                                <div class="producto-item row mb-2">
+                                    <label class="form-control-label">Producto y cantidad:</label>
+                                    <div class="col-md-8">
+                                        <select class="form-control" name="productos[]">
+                                            <option value="">-- Seleccionar producto --</option>
+                                            <?php foreach ($productos as $producto_opcion) : ?>
+                                                <option value="<?= $producto_opcion->id_producto ?>" <?= $producto_opcion->id_producto == $producto->id_producto ? 'selected' : '' ?>>
+                                                    <?= $producto_opcion->nombre_producto ?>
+                                                </option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="number" class="form-control" name="unidades[]" min="1" value="<?= $producto->unidad ?>" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button type="button" class="btn btn-danger eliminar-producto">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                        } else {
+                            ?>
                             <div class="producto-item row mb-2">
                                 <div class="col-md-8">
                                     <select class="form-control" name="productos[]">
                                         <option value="">-- Seleccionar producto --</option>
-                                        <?php foreach ($productos as $producto_opcion) : ?>
-                                            <option value="<?= $producto_opcion->id_producto ?>" <?= $producto_opcion->id_producto == $producto->id_producto ? 'selected' : '' ?>>
-                                                <?= $producto_opcion->nombre_producto ?>
-                                            </option>
+                                        <?php foreach ($productos as $producto) : ?>
+                                            <option value="<?= $producto->id_producto ?>"><?= $producto->nombre_producto ?></option>
                                         <?php endforeach; ?>
                                     </select>
+                                    <div class="invalid-feedback"></div>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="number" class="form-control" name="unidades[]" min="1" value="<?= $producto->unidad ?>" required>
+                                    <input type="number" class="form-control" name="unidades[]" min="1" required>
+                                    <div class="invalid-feedback"></div>
                                 </div>
                                 <div class="col-md-1">
                                     <button type="button" class="btn btn-danger eliminar-producto">
@@ -95,31 +123,9 @@
                                     </button>
                                 </div>
                             </div>
-                        <?php
-                        }
-                    } else {
-                        ?>
-                        <div class="producto-item row mb-2">
-                            <div class="col-md-8">
-                                <select class="form-control" name="productos[]">
-                                    <option value="">-- Seleccionar producto --</option>
-                                    <?php foreach ($productos as $producto) : ?>
-                                        <option value="<?= $producto->id_producto ?>"><?= $producto->nombre_producto ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="number" class="form-control" name="unidades[]" min="1" required>
-                            </div>
-                            <div class="col-md-1">
-                                <button type="button" class="btn btn-danger eliminar-producto">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
-
                 <!-- Botón para agregar productos -->
                 <div class="text-center mb-3">
                     <button type="button" class="btn btn-success" id="agregar-producto">

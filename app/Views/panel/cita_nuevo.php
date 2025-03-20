@@ -25,12 +25,13 @@
                         <label class="form-control-label">Paciente: (<font color="red">*</font>)</label>
                         <?php
                         $parametros = array('class' => 'form-select', 'id' => 'id_persona');
-                        $opciones_personas = ['' => 'Seleccione un persona...'];
+                        $opciones_personas = ['' => 'Seleccione un paciente...'];
                         foreach ($personas as $persona) {
                             $opciones_personas[$persona->id_persona] = $persona->codigo_persona. ' - '. $persona->nombre . ' ' . $persona->ap_paterno . ' ' . $persona->ap_materno;
                         }
                         echo form_dropdown('id_persona', $opciones_personas, null, $parametros);
                         ?>
+                         <div class="invalid-feedback"></div>
                     </div>
 
                     <!-- Servicio -->
@@ -44,6 +45,7 @@
                         }
                         echo form_dropdown('id_servicio', $opciones_servicios, null, $parametros);
                         ?>
+                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
 

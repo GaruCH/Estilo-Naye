@@ -68,6 +68,7 @@
                         }
                         echo form_dropdown('id_servicio', $opciones_servicios, null, $parametros);
                         ?>
+                          <div class="invalid-feedback"></div>
                     </div>
                 </div>
 
@@ -113,36 +114,7 @@
 <script src="<?php echo base_url(RECURSOS_PANEL_JS . "/owns/message-notification.js") ?>"></script>
 
 <!-- JS específico -->
-<script src="<?php echo base_url(RECURSOS_PANEL_JS . "/specifics/cita_nuevo.js") ?>"></script>
+<script src="<?php echo base_url(RECURSOS_PANEL_JS . "/specifics/reservar_cita.js") ?>"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        emailjs.init("LrAJb84ZT1J4daVJw"); // Inicializa EmailJS
-
-        document.getElementById("formulario-cita-nuevo").addEventListener("submit", function(event) {
-            event.preventDefault(); // Evitar que el formulario se envíe normalmente
-
-            // Capturar los datos del formulario
-            let params = {
-                fecha_cita: document.getElementById("fecha_cita").value,
-                hora_cita: document.getElementById("hora_cita").value,
-                servicio: document.getElementById("id_servicio").options[document.getElementById("id_servicio").selectedIndex].text,
-                nombre_paciente: document.getElementsByName("nombre_paciente")[0].value, // Usando getElementsByName
-                correo_paciente: document.getElementsByName("correo_paciente")[0].value // Usando getElementsByName
-            };
-
-            // Enviar correo con EmailJS
-            emailjs.send("service_occslgv", "template_pqyp76q", params)
-                .then(function(response) {
-                    console.log("Correo enviado con éxito", response);
-                    alert("Cita reservada. Se ha enviado un correo de confirmación.");
-                    document.getElementById("formulario-cita-nuevo").reset(); // Resetear formulario
-                }, function(error) {
-                    console.log("Error al enviar correo", error);
-                    alert("Hubo un error al enviar el correo.");
-                });
-        });
-    });
-</script>
 
 <?= $this->endSection(); ?>

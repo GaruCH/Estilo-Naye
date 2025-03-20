@@ -6,6 +6,9 @@ $.validator.addMethod( "emailRegex", function( value, element ) {
 	return this.optional( element ) || /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test( value );
 }, "No corresponde a una ruta de email" );
 
+$.validator.addMethod("soloLetras", function (value, element) {
+    return this.optional(element) || /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(value);
+}, "Solo se permiten letras y espacios.");
 
 // FORM USUARIO_NUEVO VALIDATION
 // =================================================================
@@ -13,15 +16,18 @@ $("#formulario-usuario-nuevo").validate({
     rules:{
         nombre: {
             required: true,
-            rangelength: [3, 50]
+            rangelength: [3, 50],
+            soloLetras: true
         },
         ap_paterno: {
             required: true,
-            rangelength: [3, 50]
+            rangelength: [3, 50],
+            soloLetras: true
         },
         ap_materno: {
             required: true,
-            rangelength: [3, 50]
+            rangelength: [3, 50],
+            soloLetras: true
         },
         rol: {
             required: true
@@ -47,15 +53,18 @@ $("#formulario-usuario-nuevo").validate({
     messages: {
         nombre: {
             required: 'Se requiere el nombre del usuario.',
-            rangelength: 'El nombre debe tener entre 3 y 50 caracteres.'
+            rangelength: 'El nombre debe tener entre 3 y 50 caracteres.',
+            soloLetras: "Solo se permiten letras."
         },
         ap_paterno: {
             required: 'Se requiere el apellido paterno del usuario.',
-            rangelength: 'El apellido paterno debe tener entre 3 y 50 caracteres.'
+            rangelength: 'El apellido paterno debe tener entre 3 y 50 caracteres.',
+            soloLetras: "Solo se permiten letras."
         },
         ap_materno: {
             required: 'Se requiere el apellido materno del usuario.',
-            rangelength: 'El apellido materno debe tener entre 3 y 50 caracteres.'
+            rangelength: 'El apellido materno debe tener entre 3 y 50 caracteres.',
+            soloLetras: "Solo se permiten letras."
         },
         rol: {
             required: 'Se requiere seleccionar un rol para el usuario.'

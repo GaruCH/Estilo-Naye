@@ -14,7 +14,7 @@
                 <center>
                     <?php
                     // Definir la imagen por defecto basada en el sexo
-                    $imagen_default = ($usuario->sexo === SEXO_FEMENINO) ? 'no-image-f.png' : 'no-image-m.png';
+                    $imagen_default = ($usuario->sexo == SEXO_FEMENINO) ? 'no-image-f.png' : 'no-image-m.png';
 
                     // Verificar si la imagen del usuario está disponible
                     $imagen_user = !empty($usuario->imagen) ? base_url(IMG_DIR_USUARIOS . '/' . $usuario->imagen) : base_url(IMG_DIR_USUARIOS . '/' . $imagen_default);
