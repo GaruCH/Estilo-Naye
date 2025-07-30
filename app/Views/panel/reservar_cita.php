@@ -41,15 +41,19 @@
 
                     <!-- Hora de la cita -->
                     <div class="col-md-4 mb-3">
-                        <label class="form-control-label">Hora de la cita: (<font color="red">*</font>)</label>
+                        <label class="form-control-label">Hora de la cita: (<font color="red">8 am - 7 pm * </font>)</p></label>
+                
                         <div class="form-floating mb-3">
                             <?php
-                            $parametros = array(
+                           $parametros = array(
                                 'type' => 'time',
                                 'class' => 'form-control',
                                 'id' => 'hora_cita',
                                 'name' => 'hora_cita',
-                                'placeholder' => 'Seleccione una hora'
+                                'placeholder' => 'Seleccione una hora',
+                                'value' => $horaCita ?? '',  // si tienes valor por defecto
+                                'min' => '08:00',  // hora mínima permitida
+                                'max' => '19:00'   // hora máxima permitida (7 pm)
                             );
                             echo form_input($parametros);
                             ?>

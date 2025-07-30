@@ -46,8 +46,12 @@ $(document).ready(function () {
         }
     });
 
+    //CAMBIAR EL METODO PARA MANDAR EL CORREO NOTA: Usar el correo de hostinger
+
+
+    
     // Inicializar EmailJS
-    emailjs.init("LrAJb84ZT1J4daVJw");
+   /* emailjs.init("LrAJb84ZT1J4daVJw");
 
     // Manejo del envío del formulario
     form.on("submit", function (event) {
@@ -76,5 +80,5 @@ $(document).ready(function () {
                 console.log("Error al enviar correo", error);
                 alert("Hubo un error al enviar el correo.");
             });
-    });
+    });*/
 });

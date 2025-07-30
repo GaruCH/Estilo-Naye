@@ -39,6 +39,8 @@ $routes->post('/editar_password', 'Panel\Password::actualizar', ['as' => 'editar
 
 //Dashboard
 $routes->get('/dashboard', 'Panel\Dashboard::index', ['as' => 'dashboard_superadmin']);
+$routes->get('dashboard', 'Panel\Dashboard::index', ['as' => 'dashboard']);
+$routes->get('dashboard/estadisticas-citas', 'Panel\Dashboard::obtener_estadisticas_citas');
 
 //Usuarios
 $routes->get('/administracion_usuarios', 'Panel\Usuarios::index', ['as' => 'administracion_usuarios']);

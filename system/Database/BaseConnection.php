@@ -990,7 +990,7 @@ abstract class BaseConnection implements ConnectionInterface
         $this->pretend(false);
 
         if ($sql instanceof QueryInterface) {
-            $sql = $sql->getOriginalQuery();
+           $sql = $sql->getOriginalQuery();
         }
 
         $class = str_ireplace('Connection', 'PreparedQuery', static::class);

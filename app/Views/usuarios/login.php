@@ -28,7 +28,7 @@
 
                     <div class="mb-12">
                         <h3 class="text-letra text-3xl font-extrabold">Iniciar sesión</h3>
-                        <p class="text-lg mt-2 text-gray-800">Accede con tu cuenta de administrador.</p>
+                        <p class="text-lg mt-2 text-gray-800">Accede con tu cuenta de administrador o paciente.</p>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -88,11 +88,12 @@
                             </a>
                         </div>
                         <div>
-                            <a href="<?= route_to('usuario_register') ?>"
-                                class="text-letra font-semibold text-lg hover:underline">
-                                Regístrate aquí si eres un paciente
-                            </a>
-                        </div>
+                          <a href="<?= route_to('usuario_register') ?>"
+                         class="text-pink-600 font-bold text-lg animate-pulse hover:underline">
+                            💡 Regístrate aquí si eres un paciente NUEVO
+                             </a>
+                         </div>   
+
                     </div>
 
 

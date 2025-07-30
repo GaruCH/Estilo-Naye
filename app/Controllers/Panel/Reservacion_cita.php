@@ -88,13 +88,16 @@ class Reservacion_cita extends BaseController
         return view($nombre_vista, $contenido);
     } //end crear_vista
 
-    public function registrar()
+
+     public function registrar()
     {
         if ($this->permitido) {
             $tabla_citas = new \App\Models\Tabla_citas;
-            $session = session();
+
             // Validar que los campos obligatorios no estén vacíos
+           $session = session();
             if (
+                
                 $this->request->getPost('id_servicio') == NULL ||
                 $this->request->getPost('fecha_cita') == NULL ||
                 $this->request->getPost('hora_cita') == NULL
@@ -104,13 +107,14 @@ class Reservacion_cita extends BaseController
             }
 
             $cita = [
-                'id_persona'   => $session->id_persona,
+                'id_persona'   =>  $session -> id_persona,
                 'id_servicio'   => $this->request->getPost('id_servicio'),
                 'fecha_cita'    => $this->request->getPost('fecha_cita'),
-                'hora_cita'     => $this->request->getPost('hora_cita')
+                'hora_cita'     => $this->request->getPost('hora_cita'),
+                'estado_cita'   => 1,
             ];
-
             try {
+
                 $tabla_citas->insert($cita);
 
                 mensaje("La cita ha sido registrada exitosamente.", SUCCESS_ALERT, "¡Registro exitoso!");

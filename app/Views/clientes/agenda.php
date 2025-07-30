@@ -20,67 +20,26 @@
                     <form>
                         <!-- Datos del Cliente -->
                         <fieldset class="mb-6">
-                            <legend class="text-lg font-medium text-gray-900 mb-2">Datos del Cliente</legend>
-                            <div class="grid gap-4 md:grid-cols-2">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-900">Nombre</label>
-                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="John" disabled>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-900">Apellido Paterno</label>
-                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="Doe" disabled>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-900">Apellido Materno</label>
-                                    <input type="text" class="w-full p-2 border rounded-md" placeholder="Smith" disabled>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-900">Teléfono</label>
-                                    <input type="tel" class="w-full p-2 border rounded-md" placeholder="123-456-7890" disabled>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <!-- Información de la Cita -->
-                        <fieldset class="mb-6">
-                            <legend class="text-lg font-medium text-gray-900 mb-2">Información de la Cita</legend>
-                            <div class="grid gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-900">Fecha y Hora</label>
-                                    <input type="datetime-local" class="w-full p-2 border rounded-md" disabled>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-900">Tipo de Servicio</label>
-                                    <select class="w-full p-2 border rounded-md" disabled>
-                                        <option value="">Selecciona un servicio</option>
-                                        <option value="Afecciones de los pies">Afecciones de los pies</option>
-                                        <option value="Callosidades">Callosidades</option>
-                                        <option value="Uñas encarnadas">Uñas encarnadas</option>
-                                        <option value="Infecciones por hongos">Infecciones por hongos</option>
-                                        <option value="Tratar enfermedades del pie">Tratar enfermedades del pie</option>
-                                        <option value="Evitar que las lesiones leves se agraven">Evitar que las lesiones leves se agraven</option>
-                                        <option value="Recuperar la salud y comodidad de los pies">Recuperar la salud y comodidad de los pies</option>
-                                        <option value="Uñas engrosadas">Uñas engrosadas</option>
-                                        <option value="Hiperhidrosis">Hiperhidrosis</option>
-                                        <option value="Psoriasis">Psoriasis</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-900">Comentarios (Opcional)</label>
-                                    <textarea class="w-full p-2 border rounded-md" placeholder="Ej. Color o diseño deseado" disabled></textarea>
-                                </div>
-                            </div>
+                            <!-- Aquí puedes agregar los campos del formulario si es necesario -->
                         </fieldset>
 
                         <!-- 🔔 Mensaje de advertencia -->
-                        <div class="mb-4 p-3 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 rounded-md">
-                            <strong>¡Importante!</strong> Para poder agendar una cita, primero debes iniciar sesión o registrarte.
-                        </div>
+                      <div class="mb-6 flex items-center gap-3 bg-yellow-200 border-l-8 border-yellow-500 p-4 rounded-xl shadow-lg animate-pulse">
+                        <svg class="w-7 h-7 text-yellow-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12" y2="17"></line>
+                        </svg>
+                        <p class="text-yellow-800 font-semibold text-base leading-tight">
+                            <strong class="font-bold">¡Importante!</strong> Para poder agendar una cita, primero debes iniciar sesión o registrarte.
+                        </p>
+                      </div>
+
 
                         <!-- Botón de Enviar -->
                         <button
                             type="button"
-                            class="w-full bg-letra text-white p-2 rounded-md hover:bg-hover"
+                            class="w-full bg-letra text-white p-3 rounded-md hover:bg-hover transition-colors duration-300 font-semibold"
                             onclick="window.location.href='<?= route_to('usuario_login') ?>'">
                             Registrarse
                         </button>
@@ -96,7 +55,6 @@
             </div>
         </div>
     </section>
-
 </main>
 
 <?php include 'includes/footer.php'; ?>

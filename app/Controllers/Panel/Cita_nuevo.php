@@ -111,13 +111,16 @@ class Cita_nuevo extends BaseController
             }
 
             $cita = [
-                'id_persona'   => $this->request->getPost('id_persona'),
+                'id_persona'   =>  $this->request->getPost('id_persona'),
                 'id_servicio'   => $this->request->getPost('id_servicio'),
                 'fecha_cita'    => $this->request->getPost('fecha_cita'),
-                'hora_cita'     => $this->request->getPost('hora_cita')
+                'hora_cita'     => $this->request->getPost('hora_cita'),
+                'estado_cita'   => 1,
             ];
 
+
             try {
+                
                 $tabla_citas->insert($cita);
 
                 mensaje("La cita ha sido registrada exitosamente.", SUCCESS_ALERT, "¡Registro exitoso!");

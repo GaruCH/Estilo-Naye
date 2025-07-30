@@ -65,23 +65,7 @@ class Citas extends BaseController
 		return $datos;
 	} //end cargar_datos
 
-	/*
-	private function enviar_editar_usuario($email = NULL, $usuario = array(), $password_usuario = NULL) {
-		$configuracion_correo = array();
-		$configuracion_correo['asunto'] = 'Información de actualización';
-		$configuracion_correo['background_header'] = '#542772;';
-		$configuracion_correo['logo'] = base_url(IMG_DIR_SISTEMA.'/'.LOGO_SISTEMA_CJM);
-		$configuracion_correo['usuario'] = $usuario;
-		$configuracion_correo['password'] = $password_usuario;
-		$configuracion_correo['rol_usuario'] = ROLES[$usuario["id_rol"]];
-		$configuracion_correo['header'] = 'Datos Generales del Usuario';
-		$configuracion_correo['descripcion'] = 'Te proporcionamos tus credenciales de acceso actualizadas para el SiAdCJM.';
-		$configuracion_correo['acronimo_sistema'] = ACRONIMO_SISTEMA;
-		$plantilla_email = view('plantilla/email_base', $configuracion_correo);
-		return enviar_correo_individual(CORREO_EMISOR_SISTEMA, ACRONIMO_SISTEMA , $email, $configuracion_correo['asunto'], $plantilla_email);
-	}//end enviar_editar_usuario
-
-*/
+	
 	private function crear_vista($nombre_vista, $contenido = array())
 	{
 		$contenido['menu'] = crear_menu_panel();

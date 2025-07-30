@@ -5,7 +5,8 @@
         <div class="flex justify-center">
             <div class="text-center w-1/2 mb-12 rounded-lg bg-white py-3">
                 <h2 class="text-4xl font-bold text-letra">Nuestro Catálogo</h2>
-                <p class="text-xl text-gray-700 mt-4">Tu salud y belleza en cada diseño, elige el que más te guste.</p>
+                <p class="text-xl text-gray-700 mt-4">Tu salud y belleza en cada diseño, elige el que más te guste.    
+                    Si tiene uno de referencia, contactese con nosotros por redes sociales y le cotizamos </p>
             </div>
         </div>
 

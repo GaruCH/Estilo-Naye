@@ -16,7 +16,9 @@ class Tabla_citas extends Model
         'fecha_cita',
         'hora_cita',
         'estado_cita',
-        'eliminacion'
+        'eliminacion',
+        'creacion',
+        'actualizacion',
     ];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
@@ -72,7 +74,7 @@ class Tabla_citas extends Model
                 personas.ap_materno, servicios.nombre_servicio')
             ->join('personas', 'citas.id_persona = personas.id_persona')
             ->join('servicios', 'citas.id_servicio = servicios.id_servicio')
-            ->where('citas.estado_cita', -1)
+            ->where('citas.estado_cita', value: -1)
             ->orderBy('citas.fecha_cita', 'DESC')
             ->findAll();
 
